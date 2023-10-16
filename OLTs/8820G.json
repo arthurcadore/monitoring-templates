@@ -1,0 +1,214 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-10-16T20:17:27Z",
+        "groups": [
+            {
+                "uuid": "13b3573fd87342abb52a6fded7714e52",
+                "name": "OLT Intelbras - Capacita\u00e7\u00e3o Redes"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "1d9052e901394a5e8661945f46b428bc",
+                "template": "Intelbras OLTs - OLT 8820G",
+                "name": "Intelbras OLTs - OLT 8820G",
+                "description": "This template is designed for OLT 8820G Intelbras\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 07/09/2023\n#=======================================",
+                "groups": [
+                    {
+                        "name": "OLT Intelbras - Capacita\u00e7\u00e3o Redes"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "440d391113b44b17aef04fe7465bdd0f",
+                        "name": "CPU Livre",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.5504.3.3.3.1.4.1.1",
+                        "key": "cpuIdle",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "3472769fb32e41858f59f56959f6a4c5",
+                        "name": "Mem\u00f3ria Livre",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.5504.3.3.3.1.2.1.1",
+                        "key": "freeMemory",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "80bff4c6dbd549b685b7af3e084833e6",
+                        "name": "Descri\u00e7\u00e3o",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "7c16da164b7e43d691ea73ae21650502",
+                        "name": "Nome SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "hostSNMPname",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "f77e3d6e89d043ec96905fee81ddab1c",
+                        "name": "Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "852883a4a9ce47a0ba5073caedf826cf",
+                        "name": "Contato SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "SNMPcontact",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "c1c007076c3f4e6d9a6567c6f3aabcae",
+                        "name": "Localiza\u00e7\u00e3o SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "SNMPlocation",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "56ffd2f655314b2e90612b2a73a74c0b",
+                        "name": "Port Ethernet Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},.1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(1|2|3|4|5|6|7|8|17|18|)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "54e70ea3d4ad49cc96092cd63a53ed90",
+                                "name": "If-Eth. {#IFDESCR} - MAC Address",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.6.{#SNMPINDEX}",
+                                "key": "ifMacAddress[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "0c59a35ff9004fca9c3ccfd61f575d7a",
+                                "name": "If-Eth. {#IFDESCR} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                                "key": "ifOctetsIN[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "bps"
+                            },
+                            {
+                                "uuid": "78f413e282d04edbb875c2245b6f605b",
+                                "name": "If-Eth. {#IFDESCR} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                                "key": "ifOctetsOut[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "bps"
+                            },
+                            {
+                                "uuid": "39cd24227c3c4235b32b6065b4a961d6",
+                                "name": "If-Eth. {#IFDESCR} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifOperStatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "efb67c5f05134b64b66ebb2e56e2972d",
+                                "name": "If-Eth. {#IFDESCR} - DataRate",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                                "key": "ifSpeed[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "Mbps"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "52d8df344a07489398db90c679bb3e8a",
+                        "name": "Port GPON Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFPON},.1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.gpon.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFPON}",
+                                    "value": "^(9|10|11|12|13|14|15|16)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "89c056c0c92449a7afb0c945991d2b0e",
+                                "name": "If-GPON {#IFPON} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.10.{#IFPON}",
+                                "key": "ifOctetsInGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "0c472c4aea184e908d862e365336e61f",
+                                "name": "If-GPON {#IFPON} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.16.{#IFPON}",
+                                "key": "ifOctetsOutGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "b849cc8f941a478e84291eaf3ea1374b",
+                                "name": "If-GPON {#IFPON} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#IFPON}",
+                                "key": "ifStatusGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
