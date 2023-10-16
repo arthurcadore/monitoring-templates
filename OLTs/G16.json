@@ -1,0 +1,215 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-10-16T20:19:43Z",
+        "groups": [
+            {
+                "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+                "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "b5bd167f4f2e4a43b79ef41a23e50b7d",
+                "template": "Intelbras OLTs - OLT G16",
+                "name": "Intelbras OLTs - OLT G16",
+                "description": "This template is designed for OLT G16 or G08 Intelbras\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 07/09/2023\n#=======================================",
+                "groups": [
+                    {
+                        "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "d13f88bb0c374b209b1ec8940e240998",
+                        "name": "Uso de CPU",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.13464.1.14.2.1.3.1.0",
+                        "key": "cpuStats",
+                        "history": "3d",
+                        "trends": "30d",
+                        "units": "%"
+                    },
+                    {
+                        "uuid": "98931cd114234f9c8fbc57a71f47151e",
+                        "name": "Temperatura - GPON",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.13464.1.14.2.1.3.4.0",
+                        "key": "gponChipsetTemp",
+                        "history": "3d",
+                        "trends": "30d",
+                        "units": "\u00b0C"
+                    },
+                    {
+                        "uuid": "6fdb3f421dd140299e390c7f7e380f6c",
+                        "name": "Descri\u00e7\u00e3o",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "9b9522467c934de18ac5ef26cfc8c6fe",
+                        "name": "Nome SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "hostSNMPname",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "2f52c204aea84d67b1ccea3a2ed67844",
+                        "name": "Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "b8d840842d4a4302a2f7f03498b4af63",
+                        "name": "Uso de mem\u00f3ria",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.13464.1.14.2.1.3.2.0",
+                        "key": "memoryStats",
+                        "history": "3d",
+                        "trends": "30d",
+                        "units": "%"
+                    },
+                    {
+                        "uuid": "27e7cbce569044c9ba63e66e007a4dcf",
+                        "name": "Contato SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "SNMPcontact",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "f8d8fa537c9e4766bdb2f0c9bcf24410",
+                        "name": "Localiza\u00e7\u00e3o SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "SNMPlocation",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "b5bb6f23f36149cabc90ce9ba8a1ee71",
+                        "name": "Temperatura - CHIP Swiching",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.13464.1.14.2.1.3.3.0",
+                        "key": "swChipsetTemp",
+                        "history": "3d",
+                        "trends": "30d",
+                        "units": "\u00b0C"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "a7657cdbd6f0482f85c9260deb862fbb",
+                        "name": "Port Ethernet Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},.1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(17|18|19|20|21|22)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "994e175444694d439359c952165b740e",
+                                "name": "If-Eth. {#IFDESCR} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                                "key": "ifOctetsIN[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "bps"
+                            },
+                            {
+                                "uuid": "c0249aba91a54a0d87328709ba3ca598",
+                                "name": "If-Eth. {#IFDESCR} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                                "key": "ifOctetsOut[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "bps"
+                            },
+                            {
+                                "uuid": "7767eb23529e4b688a72801e051c92c1",
+                                "name": "If-Eth. {#IFDESCR} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifOperStatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "0b0b57bb6aff439584f31520b2034ffe",
+                        "name": "Port GPON Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFPON},.1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.gpon.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFPON}",
+                                    "value": "^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "ff61b34e24804ecdb666594be7b5c20d",
+                                "name": "Interface Status - GPON {#IFPON}",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.13464.1.14.2.3.3.1.24.0.{#IFPON}",
+                                "key": "ifStatusGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "e0cb6544e24b427da40164b9bcb6dabb",
+                                "name": "Temperatura - GPON {#IFPON}",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.13464.1.14.2.3.3.1.12.0.{#IFPON}",
+                                "key": "TempGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "0",
+                                "value_type": "TEXT",
+                                "preprocessing": [
+                                    {
+                                        "type": "STR_REPLACE",
+                                        "parameters": [
+                                            "-",
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
