@@ -35,5 +35,6 @@ Click `Import` to add the template to your Zabbix environment.
 Apply Template:
 
 After importing, go to `Configuration` -> `Hosts` and select the host you want to monitor.
-In the `Templates` tab, click `Select` and add the imported template to the host.
-Save your changes!
+In the `Templates` tab, click `Select` and add the imported template to the host. Save your changes. 
+
+Remember that: The template uses SNMP to collect the device's information, so it's important to have SNMP enabled on your device before adding it to Zabbix!
