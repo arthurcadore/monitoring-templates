@@ -1,0 +1,254 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-10-16T20:18:40Z",
+        "groups": [
+            {
+                "uuid": "13b3573fd87342abb52a6fded7714e52",
+                "name": "OLT Intelbras - Capacita\u00e7\u00e3o Redes"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "0a8e339cdf2d4d39af80514b85f5ab4d",
+                "template": "Intelbras OLTs - OLT 8820i",
+                "name": "Intelbras OLTs - OLT 8820i",
+                "description": "This template is designed for OLT 8820i Intelbras\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 07/09/2023\n#=======================================",
+                "groups": [
+                    {
+                        "name": "OLT Intelbras - Capacita\u00e7\u00e3o Redes"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "5e46f8e21527401ca08b227ece5264c7",
+                        "name": "Uso de CPU",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.2021.11.9.0",
+                        "key": "cpuStats",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "10fde890ec62432387d12a507d2c0c09",
+                        "name": "Temperatura - 1\u00b0 Sensor",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.26138.1.5.1.1.0",
+                        "key": "firstSensorTemp",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "05fcacb9369142ab9bcebfcb19afdb81",
+                        "name": "Descri\u00e7\u00e3o",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "e99b6984c2bc4fb5aa395c2832b5d199",
+                        "name": "Nome SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "hostSNMPname",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "2b443344deb249fab60608bbe71a9d7a",
+                        "name": "Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "f822307d273a449fa70150f8493a7352",
+                        "name": "Uso de mem\u00f3ria",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.2021.4.6.0",
+                        "key": "memoryStats",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "4db0023e2d144626addc92c47076638c",
+                        "name": "Temperatura - 2\u00b0 Sensor",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "1.3.6.1.4.1.26138.1.5.1.2.0",
+                        "key": "secondSensorTemp",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "13a4cadd909e494c9729c90143b8140f",
+                        "name": "Contato SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "SNMPcontact",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "0b1b04cd380044f086a8b30756c7925c",
+                        "name": "Localiza\u00e7\u00e3o SNMP",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "SNMPlocation",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "a494fdf929fc43819c7a6b4b810c779e",
+                        "name": "Port Ethernet Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},.1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(1|2|3|4|5|6|7|8|17|18|)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "8e6877cf285a435091f2d4a95372f99d",
+                                "name": "If-Eth. {#IFDESCR} - MAC Address",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.6.{#SNMPINDEX}",
+                                "key": "ifMacAddress[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "bd3197e4e70a445fb04c8b72657f87d2",
+                                "name": "If-Eth. {#IFDESCR} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                                "key": "ifOctetsIN[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "bps"
+                            },
+                            {
+                                "uuid": "eeae5a07d2f04680b28d8425a71c8873",
+                                "name": "If-Eth. {#IFDESCR} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                                "key": "ifOctetsOut[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "bps"
+                            },
+                            {
+                                "uuid": "9ba837ffd466470884aa44b9faa6a1be",
+                                "name": "If-Eth. {#IFDESCR} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifOperStatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "ab4190d91dd84937829b8c5fc3bffb3e",
+                                "name": "If-Eth. {#IFDESCR} - DataRate",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                                "key": "ifSpeed[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d",
+                                "units": "Mbps"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "3eb55e9433934fe7a62289dc4341c204",
+                        "name": "Port GPON Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFPON},.1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.gpon.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFPON}",
+                                    "value": "^(9|10|11|12|13|14|15|16)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "39e224d8102b49e598e9b0f3c9d34710",
+                                "name": "If-GPON {#IFPON} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.10.{#IFPON}",
+                                "key": "ifOctetsInGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "83232f9739474f59b396f4b29878d66f",
+                                "name": "If-GPON {#IFPON} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": "1.3.6.1.2.1.2.2.1.16.{#IFPON}",
+                                "key": "ifOctetsOutGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "f60b1464d1184576ac3f98cea67e6aa3",
+                                "name": "If-GPON {#IFPON} - SFP Model",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.1.1.1.1.1.5.{#IFPON}",
+                                "key": "ifSFPModelGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "2d614ad6ec8a48d58cca2625fc7ed100",
+                                "name": "If-GPON {#IFPON} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#IFPON}",
+                                "key": "ifStatusGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "c9f1be3b74ad423f9a24be83f0e407ce",
+                                "name": "If-GPON {#IFPON} - Temperature",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.1.1.1.1.1.6.{#IFPON}",
+                                "key": "ifTempGPON[{#IFPON}]",
+                                "history": "3d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
