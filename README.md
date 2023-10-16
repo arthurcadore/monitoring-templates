@@ -3,8 +3,6 @@
 ### Author: Arthur Cadore M. Barcella
 #### Network Training Analyst at Intelbras
 
-How to Download and Import Templates into Zabbix:
-
 This repository is dedicated to zabbix's Template files for Intelbras network products. 
 
 ---
