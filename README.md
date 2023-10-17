@@ -1,4 +1,4 @@
-# zabbixTemplates
+# Zabbix Templates for Intelbras's network devices
 
 ### Author: Arthur Cadore M. Barcella
 #### Network Training Analyst at Intelbras
