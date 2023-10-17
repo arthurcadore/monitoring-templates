@@ -1,7 +1,7 @@
 {
     "zabbix_export": {
         "version": "6.0",
-        "date": "2023-10-17T16:43:25Z",
+        "date": "2023-10-17T16:45:31Z",
         "groups": [
             {
                 "uuid": "7d9b9033ef5e409f8dd158865d918a18",
@@ -71,7 +71,7 @@
                         "uuid": "bcad8077414b48e89b6ecc35a549d09c",
                         "name": "System RAM Memory Used",
                         "type": "SNMP_AGENT",
-                        "snmp_oid": ".1.3.6.1.4.1.26138.9.48.1",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.9.48.1.0",
                         "key": "memUsed",
                         "history": "3d",
                         "trends": "30d"
