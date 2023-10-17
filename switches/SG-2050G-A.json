@@ -1,0 +1,184 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-10-17T16:31:10Z",
+        "groups": [
+            {
+                "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+                "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "dcb5979ed2e949f197dc8f604d843014",
+                "template": "Intelbras Switches - SG 2050G-A",
+                "name": "Intelbras Switches - SG 2050G-A",
+                "description": "This template is designed for Intelbras SG 2050G-A switch. \n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 17/10/2023\n#=======================================",
+                "groups": [
+                    {
+                        "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "f02eccbb463643d1a9908867304b0598",
+                        "name": "SNMP Description",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "13305deff090432eb06cb01cc00bcd9d",
+                        "name": "SNMP Host Name",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "hostSNMPname",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "029aa02f395c4ba3918fc2d83662dedc",
+                        "name": "System Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "717f365f2d2a473198e1dee8b147ab86",
+                        "name": "SNMP Contact",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "SNMPcontact",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "025ef9d9d91d45708c63ad4e946c8cea",
+                        "name": "SNMP Location",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "SNMPlocation",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "43f241d2f11844db93db8815ccbb96f3",
+                        "name": "Port Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(5001|5002|5003|5004|5005|5006|5007|5008|5009|5010|5011|5012|5013|5014|5015|5016|5017|5018|5019|5020|5021|5022|5023|5024|5025|5026|5027|5028|5029|5030|5031|5032|5033|5034|5035|5036|5037|5038|5039|5040|5041|5042|5043|5044|5045|5046|5047|5048|5049|5050)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "2b0f64f6b52d4dccb217f4d1c9946192",
+                                "name": "If-Eth. {#IFDESCR} - Port Description",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.2.{#SNMPINDEX}",
+                                "key": "ifDescription[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "b8ed10f999254105b6242b59a5453258",
+                                "name": "If-Eth. {#IFDESCR} - MTU",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.4.{#SNMPINDEX}",
+                                "key": "ifMTUValue[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "732fdcd4bd23498893ec0e31e8a87a53",
+                                "name": "If-Eth. {#IFDESCR} - Data Rate",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                                "key": "ifNegociationValue[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "93a9dcb00b744ae08359e9ab2031d01d",
+                                "name": "If-Eth. {#IFDESCR} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                                "key": "ifOctetsIN[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "cf255e886f7549cfa0f2c0c586faf086",
+                                "name": "If-Eth. {#IFDESCR} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                                "key": "ifOctetsOut[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "fb458790d72140b293b9779d6fc22d39",
+                                "name": "If-Eth. {#IFDESCR} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifOperStatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "33264a38ce034f769b02a1432de72e69",
+                                "name": "If-Eth. {#IFDESCR} - STP Port Cost",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.5.{#SNMPINDEX}",
+                                "key": "ifstpportcost[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d"
+                            },
+                            {
+                                "uuid": "1f70133ee5cb4a7db4c5495e036720b5",
+                                "name": "If-Eth. {#IFDESCR} - STP Port Priority",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.2.{#SNMPINDEX}",
+                                "key": "ifstpportprior[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d"
+                            },
+                            {
+                                "uuid": "c97015f2f36748faad552e533a29b4e2",
+                                "name": "If-Eth. {#IFDESCR} - STP Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.4.{#SNMPINDEX}",
+                                "key": "ifstpstatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
