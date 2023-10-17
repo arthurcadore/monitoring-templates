@@ -1,7 +1,7 @@
 {
     "zabbix_export": {
         "version": "6.0",
-        "date": "2023-10-17T16:31:10Z",
+        "date": "2023-10-17T16:42:17Z",
         "groups": [
             {
                 "uuid": "7d9b9033ef5e409f8dd158865d918a18",
@@ -170,7 +170,7 @@
                                 "uuid": "c97015f2f36748faad552e533a29b4e2",
                                 "name": "If-Eth. {#IFDESCR} - STP Status",
                                 "type": "SNMP_AGENT",
-                                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.4.{#SNMPINDEX}",
+                                "snmp_oid": ".1.3.6.1.2.1.17.2.15.1.3.{#SNMPINDEX}",
                                 "key": "ifstpstatus[{#IFDESCR}]",
                                 "delay": "3m",
                                 "history": "1d"
