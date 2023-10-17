@@ -1,7 +1,7 @@
 {
     "zabbix_export": {
         "version": "6.0",
-        "date": "2023-10-16T20:07:43Z",
+        "date": "2023-10-17T16:33:16Z",
         "groups": [
             {
                 "uuid": "7d9b9033ef5e409f8dd158865d918a18",
@@ -11,9 +11,9 @@
         "templates": [
             {
                 "uuid": "0ebf05e81d4f473abfe359ecc3fe82e1",
-                "template": "Intelbras Switches - Linha MR",
-                "name": "Intelbras Switches - Linha MR",
-                "description": "This template is designed for Intelbras MR line switches\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 07/09/2023\n#=======================================",
+                "template": "Intelbras Switches - SG 5200 MR",
+                "name": "Intelbras Switches - SG 5200 MR",
+                "description": "This template is designed for Intelbras SG 5200 switch\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 07/09/2023\n#=======================================",
                 "groups": [
                     {
                         "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
