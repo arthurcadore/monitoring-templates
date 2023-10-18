@@ -3,7 +3,7 @@
 ### Author: Arthur Cadore M. Barcella
 #### Network Training Analyst at Intelbras
 
-This repository is dedicated to [zabbix's Template](https://www.zabbix.com/documentation/current/en/manual/config/templates) files for Intelbras network products. 
+This repository is dedicated to [Zabbix's Template](https://www.zabbix.com/documentation/current/en/manual/config/templates) files for Intelbras network products. 
 
 ---
 How to Use the Repository:
@@ -11,7 +11,7 @@ How to Use the Repository:
 First clone this repository to your local machine using the following command:
 
 ```
-git clone https://github.com/arthurcadore/zabbixTemplates
+git clone https://github.com/arthurcadore/ZabbixTemplates
 ```
 
 Locate Your Template (.json file):
@@ -22,11 +22,20 @@ Navigate to the appropriate folder in the cloned repository to find the Zabbix t
 
 Import into Zabbix:
 
+It's recommended to create the following Host Groups on Zabbix before importing the files: 
+
+- OLT: `OLT Intelbras - Capacitação Redes`
+- Switches: `Switches Intelbras - Capacitação Redes`
+- Wireless Indoor: `Wireless Indoor Intelbras - Capacitação Redes`
+- Wireless Outdoor: `Wireless Outdoor Intelbras - Capacitação Redes`
+
+
 Log in to your Zabbix web interface.
 Navigate to `Configuration` -> `Templates` in the left menu.
 Click on the `Import` button.
 Choose the downloaded Zabbix template file (ending in .json) from your local machine.
 Click `Import` to add the template to your Zabbix environment.
+
 
 --- 
 
