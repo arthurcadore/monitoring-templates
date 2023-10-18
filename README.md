@@ -3,7 +3,7 @@
 ### Author: Arthur Cadore M. Barcella
 #### Network Training Analyst at Intelbras
 
-This repository is dedicated to zabbix's Template files for Intelbras network products. 
+This repository is dedicated to [zabbix's Template](https://www.zabbix.com/integrations) files for Intelbras network products. 
 
 ---
 How to Use the Repository:
