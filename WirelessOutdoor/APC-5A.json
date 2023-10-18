@@ -1,0 +1,168 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2023-10-18T14:30:24Z",
+        "groups": [
+            {
+                "uuid": "060c604c78574659b99da3bf5b96f995",
+                "name": "Wireless Outdoor Intelbras - Capacita\u00e7\u00e3o Redes"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "f4a15377e49c4648a0435a37fc0b606f",
+                "template": "Intelbras Outdoor - APC 5A",
+                "name": "Intelbras Outdoor - APC 5A",
+                "description": "This template is designed for wireless outdoor APC 5A line products. \n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 18/10/2023\n#=======================================",
+                "groups": [
+                    {
+                        "name": "Wireless Outdoor Intelbras - Capacita\u00e7\u00e3o Redes"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "d15544c240a541aa91a41019b9d2584f",
+                        "name": "SNMP Description",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "6d623c2b57c94b87b0f142371d5e2f58",
+                        "name": "SNMP Host Name",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "hostSNMPname",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "56f4a5aa2c5b4d67a2d7f34aa637691f",
+                        "name": "System Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "79b124d2a0444a2cac180b814fde7b40",
+                        "name": "SNMP Contact",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "SNMPcontact",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "33a76f0bc53b45d782f905d80f4f8985",
+                        "name": "SNMP Location",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "SNMPlocation",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "601b56de718d473b84a97b046f84dea6",
+                        "name": "Port Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(1|2|3|4|5|6|7)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "684d8c8167f64ebfa6634b4687ae324a",
+                                "name": "If-Eth. {#IFDESCR} - Port Description",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.2.{#SNMPINDEX}",
+                                "key": "ifDescription[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "c9717424deaf43f99559823191d76ba4",
+                                "name": "If-Eth. {#IFDESCR} - MAC Address",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.6.{#SNMPINDEX}",
+                                "key": "ifmacaddr[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "d443e7ce5cf94c55a88ab97e8b4ca302",
+                                "name": "If-Eth. {#IFDESCR} - MTU",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.4.{#SNMPINDEX}",
+                                "key": "ifMTUValue[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "a98ff58fc26f4db29712cf1ed2041d1a",
+                                "name": "If-Eth. {#IFDESCR} - Data Rate",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.5.{#SNMPINDEX}",
+                                "key": "ifNegociationValue[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "02a5894d93fd4d30ae1628a4f26f325a",
+                                "name": "If-Eth. {#IFDESCR} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                                "key": "ifOctetsIN[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "d4d31d2ed4fe4bb6b6d0174752bd1734",
+                                "name": "If-Eth. {#IFDESCR} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                                "key": "ifOctetsOut[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "9c181efca6bb43ecabf4804270e31243",
+                                "name": "If-Eth. {#IFDESCR} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifOperStatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "3d",
+                                "trends": "30d"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
