@@ -1,8 +1,5 @@
 # Zabbix Templates for Intelbras's network devices
 
-### Author: Arthur Cadore M. Barcella
-#### Network Training Analyst at Intelbras
-
 This repository is dedicated to [Zabbix's Template](https://www.zabbix.com/documentation/current/en/manual/config/templates) files for Intelbras network products. 
 
 ---
