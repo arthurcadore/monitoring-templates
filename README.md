@@ -1,4 +1,6 @@
-# Zabbix Templates for Intelbras's network devices
+# Zabbix/Grafana Templates For Network Devices
+
+![main](./pictures/main.png)
 
 This repository is dedicated to [Zabbix's Template](https://www.zabbix.com/documentation/current/en/manual/config/templates) files for Intelbras network products. 
 
