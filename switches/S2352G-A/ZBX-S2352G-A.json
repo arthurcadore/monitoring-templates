@@ -1,0 +1,381 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2024-05-16T12:19:27Z",
+        "groups": [
+            {
+                "uuid": "7d9b9033ef5e409f8dd158865d918a18",
+                "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "9d8c63789c9a4f79b78ee2836f3384b6",
+                "template": "Intelbras Switches - S2352G-A",
+                "name": "Intelbras Switches - S2352G-A",
+                "description": "This template is designed for Intelbras S2352G-A switch\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 16/05/2024\n#=======================================",
+                "groups": [
+                    {
+                        "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "1aff85b94a90426cbfe7866515660b57",
+                        "name": "CPU Ratio 5min",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.1.3.0",
+                        "key": "cpu5MinUsage",
+                        "delay": "5m",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "336fa4960b8e4494ad0b929626a3442d",
+                        "name": "CPU Ratio 1min",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.4.3.1.4.0.1",
+                        "key": "cpuMinUsage",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "f1828f3b978b47c0a3e3d6678d3bc3aa",
+                        "name": "Device Model",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.47.1.1.1.1.13.2",
+                        "key": "deviceModel",
+                        "delay": "1h",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "cc7e1caaf5a14894b17bf6709e04c7aa",
+                        "name": "Device Temperature",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.2.6.1.1.1.1.12.220",
+                        "key": "DeviceTemperature",
+                        "delay": "10s",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "8a51cb8d4b7b4641842b955816227072",
+                        "name": "Device Temperature Alarm",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.2.6.1.1.1.1.17.220",
+                        "key": "DeviceTemperatureAlarm",
+                        "delay": "10s",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "c605c38c2bc54dc08e77d4948cc9952b",
+                        "name": "Device Temperature Low",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.2.6.1.1.1.1.21.220",
+                        "key": "DeviceTemperatureLow",
+                        "delay": "10s",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "95d57e27a6404aa5982e1253d4519196",
+                        "name": "Device Temperature Warning",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.2.6.1.1.1.1.13.220",
+                        "key": "DeviceTemperatureWarning",
+                        "delay": "10s",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "6da8cdbaca37415f92bc3ce8829c4968",
+                        "name": "Device Description",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "1ae649bc417a464bbbdcb231a513ef46",
+                        "name": "Device Hostname",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "hostSNMPname",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "7d38b8d1d3ab4b1492f2878c55245ca2",
+                        "name": "System Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime",
+                        "history": "3d",
+                        "trends": "30d"
+                    },
+                    {
+                        "uuid": "4a1d77e6bed34d2d8047bd8568f81222",
+                        "name": "Device Serial Number",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.4.3.1.25.0.1",
+                        "key": "serialnumber",
+                        "delay": "1h",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "7a9d53414dc94e2483a1d0666205b1d0",
+                        "name": "SNMP Contact",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "SNMPcontact",
+                        "delay": "1h",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "76ff3580bc234159b5cf2e348cd44587",
+                        "name": "Device Location",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "SNMPlocation",
+                        "delay": "1h",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "4712b97638504a5787ce01540596d1da",
+                        "name": "System Build Version",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.4.3.1.6.0.1",
+                        "key": "sysbuildversion",
+                        "delay": "1h",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "da896f9dd6c0416d84ef658ec38bd73f",
+                        "name": "System Firmware Version",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.1.4.0",
+                        "key": "sysversion",
+                        "delay": "1h",
+                        "history": "3d",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "ead0a5997c4d4c44b5b72a1a254a0000",
+                        "name": "Flash Total",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.2.5.1.1.2.1.2.13893633",
+                        "key": "Totalflashmemory",
+                        "history": "3d",
+                        "units": "Bytes"
+                    },
+                    {
+                        "uuid": "97872c11ae70452db3a16e88b32ea766",
+                        "name": "Memory Total",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.1.14.0",
+                        "key": "Totalmemory",
+                        "delay": "5s",
+                        "history": "3d",
+                        "units": "Bytes"
+                    },
+                    {
+                        "uuid": "1c3e2a99dcf54c29b9cd5bff08ed01b4",
+                        "name": "Memory Used",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.1.15.0",
+                        "key": "TotalmemoryUsed",
+                        "delay": "5s",
+                        "history": "3d",
+                        "units": "Bytes"
+                    },
+                    {
+                        "uuid": "46f614e6b4c24b03ac20c8ba0085a5aa",
+                        "name": "Memory Used Ratio",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.8.35.18.1.16.0",
+                        "key": "TotalmemoryUsedRatio",
+                        "delay": "5s",
+                        "history": "3d"
+                    },
+                    {
+                        "uuid": "b6814e0808a94595822dd100aecd63d2",
+                        "name": "Flash Used",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.26138.2.5.1.1.4.1.1.5.13893633.1",
+                        "key": "Usedlflashmemory",
+                        "history": "3d",
+                        "units": "Bytes"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "d675cad79f154244b5fc1e4ecf168882",
+                        "name": "Port Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.port.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51|52)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "9ae6ca4d075545e19b900fd8c99f5e75",
+                                "name": "If-Eth. {#IFDESCR} - Description",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.2.{#SNMPINDEX}",
+                                "key": "ifDescription[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "07cb8ba9895b4e4cb7cb766b968f0144",
+                                "name": "If-Eth. {#IFDESCR} - MTU",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.4.{#SNMPINDEX}",
+                                "key": "ifMTUValue[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "ff11971f710d4e438cf66e7ba407e9e4",
+                                "name": "If-Eth. {#IFDESCR} - NegocitationSpeed",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.31.1.1.1.15.{#SNMPINDEX}",
+                                "key": "ifNegociationValue[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "f6866b6686834d76a68b08cdff737fca",
+                                "name": "If-Eth. {#IFDESCR} - Incoming Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.10.{#SNMPINDEX}",
+                                "key": "ifOctetsIN[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "5ea53b3e1fcd4957bbe2a263eb20ea79",
+                                "name": "If-Eth. {#IFDESCR} - Outgoing Octets",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.16.{#SNMPINDEX}",
+                                "key": "ifOctetsOut[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "7b835b8d3bd14dd4bd2fffaf4aa54aa1",
+                                "name": "If-Eth. {#IFDESCR} - Operation Status",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifOperStatus[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "30d"
+                            },
+                            {
+                                "uuid": "233fcf797ec441fda0b8f0af5baf4167",
+                                "name": "If-Eth. {#IFDESCR} - Type",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.3.{#SNMPINDEX}",
+                                "key": "ifType[{#IFDESCR}]",
+                                "delay": "3m",
+                                "history": "1d",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "597e382397db4cd7a413f11ecf7db817",
+                        "name": "Transceiver Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.1]",
+                        "key": "snmp.transceiver.discovery",
+                        "filter": {
+                            "conditions": [
+                                {
+                                    "macro": "{#IFDESCR}",
+                                    "value": "^(49|50|51|52)$",
+                                    "formulaid": "A"
+                                }
+                            ]
+                        },
+                        "lifetime": "3d",
+                        "item_prototypes": [
+                            {
+                                "uuid": "c2e18a2704944f9598b4d392aad174f1",
+                                "name": "SFP {#IFDESCR} - Current",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.2.70.1.1.1.17.{#SNMPINDEX}",
+                                "key": "ifCurrent[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "23872c3c5e894800a6017396b1109204",
+                                "name": "SFP {#IFDESCR} - Model",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.2.70.1.1.1.2.{#SNMPINDEX}",
+                                "key": "ifModel[{#IFDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "5d4c7647635d42f7ab54164070cffab3",
+                                "name": "SFP {#IFDESCR} - RX PW",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.2.70.1.1.1.12.{#SNMPINDEX}",
+                                "key": "ifRxPw[{#IFDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "4b04683b094e4dc28d60f57d1198df8d",
+                                "name": "SFP {#IFDESCR} - Temperature",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.2.70.1.1.1.15.{#SNMPINDEX}",
+                                "key": "ifTemp[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "3e3d1a57200347abbaf4f03bad652410",
+                                "name": "SFP {#IFDESCR} - TX PW",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.2.70.1.1.1.9.{#SNMPINDEX}",
+                                "key": "ifTxPw[{#IFDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "c5a6083beb3247499e325150f7ce4627",
+                                "name": "SFP {#IFDESCR} - Voltage",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.26138.2.70.1.1.1.16.{#SNMPINDEX}",
+                                "key": "ifVoltage[{#IFDESCR}]"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
