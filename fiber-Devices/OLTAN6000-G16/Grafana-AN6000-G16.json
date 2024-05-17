@@ -109,152 +109,8 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 4,
+        "w": 2,
         "x": 0,
-        "y": 0
-      },
-      "id": 13,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "$DeviceGroup"
-          },
-          "host": {
-            "filter": "$DeviceIP"
-          },
-          "item": {
-            "filter": "Manage Card Memory Usage"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "Manage Card Memory Usage",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Manage Card Memory Usage": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Manage Card Memory Usage / 100": "Memory Cards Usage"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "yellow",
-                "value": 10
-              },
-              {
-                "color": "orange",
-                "value": 50
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 4,
-        "x": 4,
         "y": 0
       },
       "id": 12,
@@ -352,6 +208,430 @@
             "indexByName": {},
             "renameByName": {
               "Manage Card CPU Usage / 100": "CPU Usage"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 2,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Manage Card Memory Usage"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "Manage Card Memory Usage",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Manage Card Memory Usage": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Manage Card Memory Usage / 100": "RAM Usage"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 4,
+        "y": 0
+      },
+      "id": 70,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "System Card Temperature"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "Manage Card CPU Usage",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Manage Card CPU Usage": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Manage Card CPU Usage / 100": "CPU Usage",
+              "System Card Temperature": "Temperature"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "yellow",
+                "value": null
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 2,
+        "x": 6,
+        "y": 0
+      },
+      "id": 71,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Uptime"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "Uptime",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Manage Card CPU Usage": true,
+              "Uptime": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "Manage Card CPU Usage / 100": "CPU Usage",
+              "System Card Temperature": "System Temperature",
+              "Uptime / 100": "Uptime"
             }
           }
         }
@@ -1743,7 +2023,7 @@
                   "index": 2,
                   "text": "HU2P"
                 },
-                "640": {
+                "652": {
                   "color": "yellow",
                   "index": 4,
                   "text": "PWRD"
@@ -1781,8 +2061,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
-        "w": 3,
+        "h": 2,
+        "w": 6,
         "x": 0,
         "y": 3
       },
@@ -2117,15 +2397,15 @@
           "mappings": [
             {
               "options": {
-                "0": {
-                  "color": "yellow",
-                  "index": 0,
-                  "text": "Absent"
-                },
                 "1": {
-                  "color": "yellow",
+                  "color": "green",
+                  "index": 0,
+                  "text": "NORMAL"
+                },
+                "3": {
+                  "color": "red",
                   "index": 1,
-                  "text": "Present"
+                  "text": "FAILURE"
                 }
               },
               "type": "value"
@@ -2135,329 +2415,22 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "blue",
+                "color": "yellow",
                 "value": null
               }
             ]
           },
-          "unit": "celsius"
+          "unit": "s"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 4,
-        "w": 3,
-        "x": 3,
-        "y": 3
-      },
-      "id": 61,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "value_and_name"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "$DeviceGroup"
-          },
-          "hide": false,
-          "host": {
-            "filter": "$DeviceIP"
-          },
-          "item": {
-            "filter": "1 - Card Stats"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "$DeviceGroup"
-          },
-          "hide": false,
-          "host": {
-            "filter": "$DeviceIP"
-          },
-          "item": {
-            "filter": "9 - Card Stats"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "$DeviceGroup"
-          },
-          "hide": false,
-          "host": {
-            "filter": "$DeviceIP"
-          },
-          "item": {
-            "filter": "19 - Card Stats"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "C",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "$DeviceGroup"
-          },
-          "hide": false,
-          "host": {
-            "filter": "$DeviceIP"
-          },
-          "item": {
-            "filter": "23 - Card Stats"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "D",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "joinByField",
-          "options": {
-            "mode": "outer"
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {},
-            "indexByName": {
-              "1 - Card Stats": 1,
-              "19 - Card Stats": 3,
-              "23 - Card Stats": 4,
-              "9 - Card Stats": 2,
-              "Time": 0
-            },
-            "renameByName": {
-              "1 - Card Type": "",
-              "If-Eth. 1 - Operation Status": "GE1",
-              "If-Eth. 2 - Operation Status": "GE2",
-              "If-Eth. 3 - Operation Status": "GE3",
-              "If-Eth. 4 - Operation Status": "GE4",
-              "If-Eth. 5 - Operation Status": "GE5",
-              "If-Eth. 6 - Operation Status": "GE6",
-              "If-Eth. 7 - Operation Status": "GE7",
-              "If-Eth. 8 - Operation Status": "GE8"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "yellow",
-                "value": 10
-              },
-              {
-                "color": "orange",
-                "value": 50
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
         "w": 2,
         "x": 6,
         "y": 3
       },
-      "id": 70,
+      "id": 74,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -2492,7 +2465,7 @@
             "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "System Card Temperature"
+            "filter": "Power Supply 1 - Stats"
           },
           "itemTag": {
             "filter": ""
@@ -2525,6 +2498,59 @@
           "trigger": {
             "filter": ""
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Power Supply 2 - Stats"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
       ],
       "transformations": [
@@ -2532,7 +2558,7 @@
           "id": "calculateField",
           "options": {
             "binary": {
-              "left": "Manage Card CPU Usage",
+              "left": "Uptime",
               "operator": "/",
               "reducer": "sum",
               "right": "100"
@@ -2547,12 +2573,14 @@
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Manage Card CPU Usage": true
+              "Manage Card CPU Usage": true,
+              "Uptime": true
             },
             "indexByName": {},
             "renameByName": {
               "Manage Card CPU Usage / 100": "CPU Usage",
-              "System Card Temperature": "System Temperature"
+              "System Card Temperature": "System Temperature",
+              "Uptime / 100": "Uptime"
             }
           }
         }
@@ -2830,27 +2858,43 @@
           "color": {
             "mode": "thresholds"
           },
-          "mappings": [],
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "yellow",
+                  "index": 0,
+                  "text": "Absent"
+                },
+                "1": {
+                  "color": "yellow",
+                  "index": 1,
+                  "text": "Present"
+                }
+              },
+              "type": "value"
+            }
+          ],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "yellow",
+                "color": "blue",
                 "value": null
               }
             ]
           },
-          "unit": "s"
+          "unit": "celsius"
         },
         "overrides": []
       },
       "gridPos": {
         "h": 2,
-        "w": 2,
-        "x": 6,
+        "w": 6,
+        "x": 0,
         "y": 5
       },
-      "id": 71,
+      "id": 61,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -2863,7 +2907,7 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "textMode": "value_and_name"
       },
       "pluginVersion": "9.3.2",
       "targets": [
@@ -2881,11 +2925,65 @@
           "group": {
             "filter": "$DeviceGroup"
           },
+          "hide": false,
           "host": {
             "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "Uptime"
+            "filter": "1 - Card Stats"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "9 - Card Stats"
           },
           "itemTag": {
             "filter": ""
@@ -2918,36 +3016,195 @@
           "trigger": {
             "filter": ""
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "19 - Card Stats"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "23 - Card Stats"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "24 - Card Stats"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
       ],
       "transformations": [
         {
-          "id": "calculateField",
+          "id": "joinByField",
           "options": {
-            "binary": {
-              "left": "Uptime",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
+            "mode": "outer"
           }
         },
         {
           "id": "organize",
           "options": {
-            "excludeByName": {
-              "Manage Card CPU Usage": true,
-              "Uptime": true
+            "excludeByName": {},
+            "indexByName": {
+              "1 - Card Stats": 1,
+              "19 - Card Stats": 3,
+              "23 - Card Stats": 4,
+              "9 - Card Stats": 2,
+              "Time": 0
             },
-            "indexByName": {},
             "renameByName": {
-              "Manage Card CPU Usage / 100": "CPU Usage",
-              "System Card Temperature": "System Temperature",
-              "Uptime / 100": "Uptime"
+              "1 - Card Type": "",
+              "If-Eth. 1 - Operation Status": "GE1",
+              "If-Eth. 2 - Operation Status": "GE2",
+              "If-Eth. 3 - Operation Status": "GE3",
+              "If-Eth. 4 - Operation Status": "GE4",
+              "If-Eth. 5 - Operation Status": "GE5",
+              "If-Eth. 6 - Operation Status": "GE6",
+              "If-Eth. 7 - Operation Status": "GE7",
+              "If-Eth. 8 - Operation Status": "GE8"
             }
           }
         }
@@ -5203,12 +5460,34 @@
           }
         },
         {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP+ 19/1 - Temperature",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
           "id": "organize",
           "options": {
-            "excludeByName": {},
+            "excludeByName": {
+              "SFP+ 19/1 - Temperature": true
+            },
             "indexByName": {
-              "GF 19/5 - Port Rate": 1,
-              "GF 19/6 - Port Rate": 2,
+              "GF 19/5 - Temperature": 6,
+              "GF 19/6 - Temperature": 7,
+              "SFP 19/3 - Temperature": 4,
+              "SFP 19/4 - Temperature": 5,
+              "SFP+ 19/1 - Temperature": 1,
+              "SFP+ 19/1 - Temperature / 100": 2,
+              "SFP+ 19/2 - Temperature": 3,
               "Time": 0
             },
             "renameByName": {
@@ -5228,6 +5507,7 @@
               "SFP 19/3 - Temperature": "SFP+ 19/3",
               "SFP 19/4 - Temperature": "SFP+ 19/4",
               "SFP+ 19/1 - Temperature": "SFP+ 19/1",
+              "SFP+ 19/1 - Temperature / 100": "SFP+ 19/1",
               "SFP+ 19/2 - Temperature": "SFP+ 19/2"
             }
           }
@@ -9511,13 +9791,13 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "FiberHome Copy",
   "uid": "KA70BVPIz",
-  "version": 10,
+  "version": 15,
   "weekStart": ""
 }
