@@ -2310,11 +2310,11 @@
               "If-Eth. 2 - Operation Status": "GE2",
               "If-Eth. 3 - Operation Status": "GE3",
               "If-Eth. 4 - Operation Status": "GE4",
-              "If-Eth. 49 - Operation Status": "SFP-GE49",
+              "If-Eth. 49 - Operation Status": "SFP-XE49",
               "If-Eth. 5 - Operation Status": "GE5",
-              "If-Eth. 50 - Operation Status": "SFP-GE50",
-              "If-Eth. 51 - Operation Status": "SFP-GE51",
-              "If-Eth. 52 - Operation Status": "SFP-GE52",
+              "If-Eth. 50 - Operation Status": "SFP-XE50",
+              "If-Eth. 51 - Operation Status": "SFP-XE51",
+              "If-Eth. 52 - Operation Status": "SFP-XE52",
               "If-Eth. 6 - Operation Status": "GE6",
               "If-Eth. 7 - Operation Status": "GE7",
               "If-Eth. 8 - Operation Status": "GE8"
@@ -7453,8 +7453,8 @@
       {
         "current": {
           "selected": false,
-          "text": "10.1.40.209 - S2352G-A",
-          "value": "10.1.40.209 - S2352G-A"
+          "text": "10.1.40.207 - S2352G-B",
+          "value": "10.1.40.207 - S2352G-B"
         },
         "hide": 0,
         "includeAll": false,
@@ -7463,11 +7463,12 @@
         "options": [
           {
             "selected": true,
-            "text": "10.1.40.209 - S2352G-A",
-            "value": "10.1.40.209 - S2352G-A"
+            "text": "10.1.40.207 - S2352G-B",
+            "value": "10.1.40.207 - S2352G-B"
           }
         ],
-        "query": "10.1.40.209 - S2352G-A",
+        "query": "10.1.40.207 - S2352G-B",
+        "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
       },
@@ -7500,8 +7501,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "S2352G-A",
-  "uid": "kOu_OWEIz",
-  "version": 18,
+  "title": "S2352G-B",
+  "uid": "BVjMz4PSz",
+  "version": 2,
   "weekStart": ""
 }
