@@ -13634,9 +13634,26 @@
           "options": {}
         },
         {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "PON 2/2 - Temperature",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
           "id": "organize",
           "options": {
-            "excludeByName": {},
+            "excludeByName": {
+              "PON 2/2 - Temperature": true
+            },
             "indexByName": {
               "PON 1/1 - Temperature": 1,
               "PON 1/10 - Temperature": 10,
@@ -13655,21 +13672,22 @@
               "PON 1/8 - Temperature": 8,
               "PON 1/9 - Temperature": 9,
               "PON 2/1 - Temperature": 17,
-              "PON 2/10 - Temperature": 26,
-              "PON 2/11 - Temperature": 27,
-              "PON 2/12 - Temperature": 28,
-              "PON 2/13 - Temperature": 29,
-              "PON 2/14 - Temperature": 30,
-              "PON 2/15 - Temperature": 31,
-              "PON 2/16 - Temperature": 32,
+              "PON 2/10 - Temperature": 27,
+              "PON 2/11 - Temperature": 28,
+              "PON 2/12 - Temperature": 29,
+              "PON 2/13 - Temperature": 30,
+              "PON 2/14 - Temperature": 31,
+              "PON 2/15 - Temperature": 32,
+              "PON 2/16 - Temperature": 33,
               "PON 2/2 - Temperature": 18,
-              "PON 2/3 - Temperature": 19,
-              "PON 2/4 - Temperature": 20,
-              "PON 2/5 - Temperature": 21,
-              "PON 2/6 - Temperature": 22,
-              "PON 2/7 - Temperature": 23,
-              "PON 2/8 - Temperature": 24,
-              "PON 2/9 - Temperature": 25,
+              "PON 2/2 - Temperature / 100": 19,
+              "PON 2/3 - Temperature": 20,
+              "PON 2/4 - Temperature": 21,
+              "PON 2/5 - Temperature": 22,
+              "PON 2/6 - Temperature": 23,
+              "PON 2/7 - Temperature": 24,
+              "PON 2/8 - Temperature": 25,
+              "PON 2/9 - Temperature": 26,
               "Time": 0
             },
             "renameByName": {
@@ -13747,6 +13765,7 @@
               "PON 2/16 - Temperature": "PON 2/16",
               "PON 2/2 - Auth CPE Number": "PON 2/2",
               "PON 2/2 - Temperature": "PON 2/2",
+              "PON 2/2 - Temperature / 100": "PON 2/2",
               "PON 2/3 - Auth CPE Number": "PON 2/3",
               "PON 2/3 - Temperature": "PON 2/3",
               "PON 2/4 - Auth CPE Number": "PON 2/4",
@@ -14004,6 +14023,6 @@
   "timezone": "",
   "title": "FiberHome AN6000-2",
   "uid": "jVnX1HEIk",
-  "version": 11,
+  "version": 13,
   "weekStart": ""
 }
