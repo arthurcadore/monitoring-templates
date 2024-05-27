@@ -1,0 +1,113 @@
+INTREBRAS_SYSTEM_TABLE_MIB	DEFINITIONS ::= BEGIN
+	IMPORTS
+        enterprises    FROM RFC1155-SMI;
+		CpuUsageString, RamUsageString
+			FROM SNMPv2-TC
+	intelbras					OBJECT IDENTIFIER ::= { enterprises 26138 }
+	intelbrasProducts			OBJECT IDENTIFIER ::= { intelbras 10 }
+	intelbrasCommonMgmt			OBJECT IDENTIFIER ::= { intelbrasProducts 1 }
+	intelbrasCommonMgmtMIB		OBJECT IDENTIFIER ::= { intelbrasCommonMgmt 47 }
+	SG_2404_PoE_L2+				OBJECT IDENTIFIER ::= { intelbrasCommonMgmtMIB 102 }
+	interbrasPrimeDeviceInfo	OBJECT IDENTIFIER ::= { SG_2404_PoE_L2+ 1 }
+	intelbrasSwInfo				OBJECT IDENTIFIER ::= { interbrasPrimeDeviceInfo 1 }
+	intelbrasSwSystemInfo		OBJECT IDENTIFIER ::= { intelbrasSwInfo 6 }
+	intelbrasSwPortInfo		    OBJECT IDENTIFIER ::= { intelbrasSwInfo 7 }
+
+	ibSystemCpuUsed		OBJECT-TYPE
+		SYNTAX      CpuUsageString (SIZE (0..31))
+        MAX-ACCESS  read-only
+        STATUS      current
+        DESCRIPTION
+               "Get Device system CPU usage rate."
+        ::= { intelbrasSwSystemInfo 1 }
+		
+	ibSystemRamUsed		OBJECT-TYPE
+		SYNTAX      RamUsageString (SIZE (0..31))
+        MAX-ACCESS  read-only
+        STATUS      current
+        DESCRIPTION
+               "Get Device system Ram usage rate."
+        ::= { intelbrasSwSystemInfo 2 }
+
+	ibSystemFirmwareVersion	OBJECT-TYPE
+		SYNTAX      FirmVerString (SIZE (0..31))
+        MAX-ACCESS  read-only
+        STATUS      current
+        DESCRIPTION
+               "Get Device system Firmware Version."
+        ::= { intelbrasSwSystemInfo 3 }
+
+
+
+	intbrasPortTable OBJECT-TYPE
+	    SYNTAX  SEQUENCE OF IntPortEntry
+	    ACCESS  not-accessible
+	    STATUS  mandatory
+	    DESCRIPTION
+	            "A list of interface entries.  The number of
+	            entries is given by the value of ifNumber."
+	    ::= { intelbrasSwPortInfo 1 }
+
+	IntPortEntry OBJECT-TYPE
+	    SYNTAX  IntPortEntry
+	    ACCESS  not-accessible
+	    STATUS  mandatory
+	    DESCRIPTION
+	            "An interface entry containing port status, 
+	            port id, role, port cost."
+	    INDEX   { ipIndex }
+	    ::= { intbrasPortTable 1 }
+
+	IntPortEntry ::=
+	    SEQUENCE {
+	        intPortStatus
+	            DisplayString,
+	        intPortId
+	            DisplayString,
+	        intRole
+	            DisplayString,
+	        intPortCost
+	            DisplayString,
+	    }   
+
+	intPortStatus OBJECT-TYPE
+	    SYNTAX  DisplayString (SIZE (0..255))
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION
+	            "A textual string containing information about the
+	            port status.  This string should include the type of
+	            disabled, blocking, learning, forwarding."
+	    ::= { IntPortEntry 1 }
+
+	intPortId OBJECT-TYPE
+	    SYNTAX  DisplayString (SIZE (0..255))
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION
+	            "A textual string containing information about the
+	            port id."
+	    ::= { IntPortEntry 2 }
+
+	intRole OBJECT-TYPE
+	    SYNTAX  DisplayString (SIZE (0..255))
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION
+	            "A textual string containing information about the
+	            port status.  This string should include the type of
+	            disabled, blocking, learning, forwarding."
+	    ::= { IntPortEntry 3 }
+
+	intPortCost OBJECT-TYPE
+	    SYNTAX  DisplayString (SIZE (0..255))
+	    ACCESS  read-only
+	    STATUS  mandatory
+	    DESCRIPTION
+	            "A textual string containing information about the
+	            port role.  This string should include the type of
+	            disabled, master, root, designated, alternated, backup."
+	    ::= { IntPortEntry 4 }
+	
+	
+END
