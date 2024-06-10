@@ -1,0 +1,323 @@
+{
+    "zabbix_export": {
+        "version": "6.0",
+        "date": "2024-06-10T13:26:14Z",
+        "groups": [
+            {
+                "uuid": "fdf6752501a5410e8a241215c6fd8003",
+                "name": "Wireless Controllers"
+            }
+        ],
+        "templates": [
+            {
+                "uuid": "071c3ed3fe224103bfe4f5594e7302a4",
+                "template": "Intelbras Wireless Controllers - WC3020",
+                "name": "Intelbras Wireless Controllers - WC3020",
+                "description": "This template is designed for Intelbras WC3020 Wireless Controller\n\n#=======================================\nGithub: https://github.com/arthurcadore/monitoring-templates\nDate: 05/06/2024\n#=======================================",
+                "groups": [
+                    {
+                        "name": "Wireless Controllers"
+                    }
+                ],
+                "items": [
+                    {
+                        "uuid": "7d2b870f1795498f8217cb53386213d0",
+                        "name": "Device Admin Contact",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.4.0",
+                        "key": "HostAdmContact",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "13197b463ec5418ab36784752c263790",
+                        "name": "Device Description",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.1.0",
+                        "key": "HostDescription",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "c45d20d1292c4a6281347a032658b341",
+                        "name": "Device Location",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.6.0",
+                        "key": "HostLocation",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "f37dfa372b254a1890c1dbe8a3e98bed",
+                        "name": "Device Model",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.47.1.1.1.1.13.2",
+                        "key": "HostModel",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "9577e31f4a75483ca6cd1937c472db69",
+                        "name": "Device Hostname",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.5.0",
+                        "key": "Hostname",
+                        "trends": "0",
+                        "value_type": "TEXT"
+                    },
+                    {
+                        "uuid": "8fff846daec94b26ae3394abb2f993b2",
+                        "name": "System Uptime",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.2.1.1.3.0",
+                        "key": "HostUptime"
+                    },
+                    {
+                        "uuid": "9427185245d34178b2c62f84ea798818",
+                        "name": "System CPU Usage 1min",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.8.35.18.4.14.1.4.0.1.0.1",
+                        "key": "syscpu1min"
+                    },
+                    {
+                        "uuid": "2d8543e71172484d86da696a4791a22e",
+                        "name": "System CPU Usage 5seg",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.8.35.18.4.14.1.3.0.1.0.1",
+                        "key": "syscpu5seg",
+                        "delay": "5s"
+                    },
+                    {
+                        "uuid": "d2fa797261634c8eaa17b2979601f56f",
+                        "name": "System Flash Total",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.5.1.1.4.1.1.5.11599873.1",
+                        "key": "sysflashtot"
+                    },
+                    {
+                        "uuid": "78932cb80c174c81826e8febb6ce6e47",
+                        "name": "System Flash Partition Total",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.5.1.1.2.1.15.11599873",
+                        "key": "sysflashtotpr"
+                    },
+                    {
+                        "uuid": "cc0af924cb3244299de3138d8f404535",
+                        "name": "System Memory Total",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.8.35.18.4.3.1.11.0.1",
+                        "key": "sysmemtot"
+                    },
+                    {
+                        "uuid": "9793e0175b634d0bb5d2460083fc85a0",
+                        "name": "System Memory Used",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.8.35.18.4.3.1.12.0.1",
+                        "key": "sysmemused"
+                    },
+                    {
+                        "uuid": "42db3c2a545a4fa996477a7d5441ffa1",
+                        "name": "System Temperature",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.6.1.1.1.1.12.182",
+                        "key": "systemperature"
+                    },
+                    {
+                        "uuid": "04a751e0337b4adbafc91dcb819e3590",
+                        "name": "System Temperature Alarm",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.6.1.1.1.1.17.182",
+                        "key": "systemperatureAlr"
+                    },
+                    {
+                        "uuid": "af7ff42100c742b3933e48e85db65dd8",
+                        "name": "System Temperature Warning",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.6.1.1.1.1.13.182",
+                        "key": "systemperaturetr"
+                    },
+                    {
+                        "uuid": "46b0623ee24d4a7da2f1197f17027ab6",
+                        "name": "WLAN Associated APs",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.75.1.1.2.3.1.2.1",
+                        "key": "wlanAssocAPs"
+                    },
+                    {
+                        "uuid": "ec922f28a13949488d4d758930b2e18b",
+                        "name": "WLAN Online APs",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": ".1.3.6.1.4.1.25506.2.75.1.1.2.4.0",
+                        "key": "wlanOnileAPs"
+                    }
+                ],
+                "discovery_rules": [
+                    {
+                        "uuid": "6bf46b123b934d55aaa9c8079b776da7",
+                        "name": "APs Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#APSDESCR},1.3.6.1.4.1.25506.2.75.12.1.1.1.2]",
+                        "key": "APsDiscovery",
+                        "item_prototypes": [
+                            {
+                                "uuid": "4e900c4099ab4bbbba82add26c6af3e7",
+                                "name": "AP Models",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.25506.2.75.12.1.1.1.4.{#SNMPINDEX}",
+                                "key": "apDescr[{#APSDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "349e8bec62c74afb91061b03090d2c3c",
+                                "name": "AP SerialNumbers",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.25506.2.75.12.1.1.1.3.{#SNMPINDEX}",
+                                "key": "apSN[{#APSDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "37597d776c6e49de82fe8e0da9f50e69",
+                        "name": "Interface Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#IFDESCR},1.3.6.1.2.1.2.2.1.1]",
+                        "key": "ifDiscovery",
+                        "item_prototypes": [
+                            {
+                                "uuid": "d75abce6c9954fd497f425be35ac7ee2",
+                                "name": "{#IFDESCR} - Description",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.31.1.1.1.1.{#SNMPINDEX}",
+                                "key": "ifDescription[{#IFDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "357b67df1a404e9b9a17154ad19b8a4a",
+                                "name": "{#IFDESCR} - InDiscards",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.13.{#SNMPINDEX}",
+                                "key": "ifInDiscards[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "30573166387d41fa8ee6da7ee94d5645",
+                                "name": "{#IFDESCR} - InErrors",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.13.{#SNMPINDEX}",
+                                "key": "ifInErrors[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "f91e9be0c4264813a489ebe823367256",
+                                "name": "{#IFDESCR} - OutDiscards",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.19.{#SNMPINDEX}",
+                                "key": "ifOutDiscards[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "2dadf5c7989c448a988c6ac71a3d663d",
+                                "name": "{#IFDESCR} - OutErrors",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.20.{#SNMPINDEX}",
+                                "key": "ifOutErrors[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "fcc6da8a6a744864a8a9f1cd64227610",
+                                "name": "{#IFDESCR} - Speed",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.31.1.1.1.15.{#SNMPINDEX}",
+                                "key": "ifSpeed[{#IFDESCR}]"
+                            },
+                            {
+                                "uuid": "38374f8d1d984b1e926273d00cbe98e9",
+                                "name": "{#IFDESCR} - Stats",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}",
+                                "key": "ifStats[{#IFDESCR}]"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "46189cc93d2c42b984c5863906fa5b0c",
+                        "name": "Physical Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#PHYDESCR},1.3.6.1.2.1.47.1.1.1.1.4]",
+                        "key": "PhyDiscovery",
+                        "item_prototypes": [
+                            {
+                                "uuid": "1640ff59eda4431b9d163b68ae3f64e8",
+                                "name": "{#PHYDESCR} - Description",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.47.1.1.1.1.7.{#SNMPINDEX}",
+                                "key": "phyDescription[{#PHYDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "5560e0c160ce4c03b2789f37bcda726d",
+                                "name": "{#PHYDESCR} - SerialNumber",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.47.1.1.1.1.11.{#SNMPINDEX}",
+                                "key": "phySN[{#PHYDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "3c6b036981a94af0bd8ec4fc782dd541",
+                                "name": "{#PHYDESCR} - Type",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.47.1.1.1.1.5.{#SNMPINDEX}",
+                                "key": "phyType[{#PHYDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            },
+                            {
+                                "uuid": "45f581b674ed438f990ec435654f8154",
+                                "name": "{#PHYDESCR} - Version",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.2.1.47.1.1.1.1.10.{#SNMPINDEX}",
+                                "key": "phyVersion[{#PHYDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            }
+                        ]
+                    },
+                    {
+                        "uuid": "c1984de9030749d29eddf9579cdf3db6",
+                        "name": "Wireless Discovery",
+                        "type": "SNMP_AGENT",
+                        "snmp_oid": "discovery[{#PHYDESCR},1.3.6.1.4.1.25506.2.75.2.1.7.1.2]",
+                        "key": "wlanDiscovery",
+                        "item_prototypes": [
+                            {
+                                "uuid": "e94d999f6c7340d7b7783431cb3a5425",
+                                "name": "Wireless Connected Clients",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.25506.2.75.2.1.7.1.5.{#SNMPINDEX}",
+                                "key": "wlanConnectedtotal[{#PHYDESCR}]"
+                            },
+                            {
+                                "uuid": "8629a192a572467cb9685ad3bf5bb725",
+                                "name": "{#PHYDESCR} Connected Clients",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.25506.2.75.2.1.7.1.5.{#SNMPINDEX}",
+                                "key": "wlanConnected[{#PHYDESCR}]"
+                            },
+                            {
+                                "uuid": "b0b1ea325e2d4041a43e3f3ab78e4b2d",
+                                "name": "Wireless - ESSID",
+                                "type": "SNMP_AGENT",
+                                "snmp_oid": ".1.3.6.1.4.1.25506.2.75.2.1.7.1.2.{#SNMPINDEX}",
+                                "key": "wlanESSID[{#PHYDESCR}]",
+                                "trends": "0",
+                                "value_type": "TEXT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
