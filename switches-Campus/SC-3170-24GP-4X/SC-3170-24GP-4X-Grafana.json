@@ -85,6 +85,368 @@
       "fieldConfig": {
         "defaults": {
           "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "CPU Ratio 1min"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 3,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Memory Used Ratio"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 0
+      },
+      "id": 27,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Device Temperature"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "System Uptime",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "System Uptime": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "System Uptime / 100": "System Uptime"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
             "mode": "palette-classic"
           },
           "custom": {
@@ -102,10 +464,10 @@
       "gridPos": {
         "h": 8,
         "w": 4,
-        "x": 12,
+        "x": 9,
         "y": 0
       },
-      "id": 14,
+      "id": 4,
       "options": {
         "displayLabels": [
           "percent"
@@ -142,10 +504,204 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI2"
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Memory Used"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "Total Memory"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "RAM Memory Stats",
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Free Memory",
+            "binary": {
+              "left": "Total Memory",
+              "operator": "-",
+              "reducer": "sum",
+              "right": "Memory Used"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Free Memory": false,
+              "Memory Total": true,
+              "Memory Used": false,
+              "Total Memory": true
+            },
+            "indexByName": {},
+            "renameByName": {}
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": [],
+          "unit": "decbits"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 4,
+        "x": 13,
+        "y": 0
+      },
+      "id": 58,
+      "options": {
+        "displayLabels": [
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": []
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Flash Total"
@@ -194,11 +750,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI2"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Flash Used"
@@ -237,7 +793,38 @@
         }
       ],
       "title": "Flash Memory Stats",
-      "transformations": [],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "alias": "Free Memory",
+            "binary": {
+              "left": "Flash Total",
+              "operator": "-",
+              "reducer": "sum",
+              "right": "Flash Used"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Flash Total": true,
+              "Free Memory": false,
+              "Memory Total": true,
+              "Memory Used": false,
+              "Total Memory": true
+            },
+            "indexByName": {},
+            "renameByName": {}
+          }
+        }
+      ],
       "transparent": true,
       "type": "piechart"
     },
@@ -276,8 +863,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 8,
-        "x": 16,
+        "w": 7,
+        "x": 17,
         "y": 0
       },
       "id": 24,
@@ -306,10 +893,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Device Description"
@@ -407,7 +994,7 @@
       "gridPos": {
         "h": 2,
         "w": 4,
-        "x": 16,
+        "x": 17,
         "y": 2
       },
       "id": 17,
@@ -436,10 +1023,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Device Hostname"
@@ -536,8 +1123,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 4,
-        "x": 20,
+        "w": 3,
+        "x": 21,
         "y": 2
       },
       "id": 22,
@@ -566,10 +1153,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "System Firmware Version"
@@ -641,6 +1228,458 @@
           "color": {
             "mode": "thresholds"
           },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 4
+      },
+      "id": 26,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "System Uptime"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "System Uptime",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "System Uptime": true
+            },
+            "indexByName": {},
+            "renameByName": {
+              "System Uptime / 100": "System Uptime"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "green",
+                  "index": 0
+                },
+                "2": {
+                  "color": "red",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "celsius"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 3,
+        "y": 4
+      },
+      "id": 36,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "name"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "If-Eth. 25 - Operation Status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "If-Eth. 26 - Operation Status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "If-Eth. 27 - Operation Status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "G",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "If-Eth. 28 - Operation Status"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "joinByField",
+          "options": {
+            "mode": "outer"
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {},
+            "indexByName": {
+              "If-Eth. 1 - Operation Status": 1,
+              "If-Eth. 2 - Operation Status": 2,
+              "If-Eth. 3 - Operation Status": 3,
+              "If-Eth. 4 - Operation Status": 4,
+              "If-Eth. 5 - Operation Status": 5,
+              "If-Eth. 6 - Operation Status": 6,
+              "If-Eth. 7 - Operation Status": 7,
+              "If-Eth. 8 - Operation Status": 8,
+              "Time": 0
+            },
+            "renameByName": {
+              "If-Eth. 1 - Operation Status": "GE1",
+              "If-Eth. 2 - Operation Status": "GE2",
+              "If-Eth. 25 - Operation Status": "XE25",
+              "If-Eth. 26 - Operation Status": "XE26",
+              "If-Eth. 27 - Operation Status": "XE27",
+              "If-Eth. 28 - Operation Status": "XE28",
+              "If-Eth. 3 - Operation Status": "GE3",
+              "If-Eth. 4 - Operation Status": "GE4",
+              "If-Eth. 49 - Operation Status": "SFP-GE49",
+              "If-Eth. 5 - Operation Status": "GE5",
+              "If-Eth. 50 - Operation Status": "SFP-GE50",
+              "If-Eth. 51 - Operation Status": "SFP-GE51",
+              "If-Eth. 52 - Operation Status": "SFP-GE52",
+              "If-Eth. 6 - Operation Status": "GE6",
+              "If-Eth. 7 - Operation Status": "GE7",
+              "If-Eth. 8 - Operation Status": "GE8"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
           "custom": {
             "align": "center",
             "displayMode": "color-background",
@@ -667,7 +1706,7 @@
       "gridPos": {
         "h": 2,
         "w": 4,
-        "x": 16,
+        "x": 17,
         "y": 4
       },
       "id": 18,
@@ -696,10 +1735,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Device Location"
@@ -796,8 +1835,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 4,
-        "x": 20,
+        "w": 3,
+        "x": 21,
         "y": 4
       },
       "id": 23,
@@ -826,10 +1865,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "System Build Version"
@@ -927,7 +1966,7 @@
       "gridPos": {
         "h": 2,
         "w": 4,
-        "x": 16,
+        "x": 17,
         "y": 6
       },
       "id": 19,
@@ -956,10 +1995,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Device Model"
@@ -1056,8 +2095,8 @@
       },
       "gridPos": {
         "h": 2,
-        "w": 4,
-        "x": 20,
+        "w": 3,
+        "x": 21,
         "y": 6
       },
       "id": 20,
@@ -1086,10 +2125,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "Device Serial Number"
@@ -1159,804 +2198,6 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "yellow",
-                "value": 10
-              },
-              {
-                "color": "orange",
-                "value": 50
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 4,
-        "x": 0,
-        "y": 8
-      },
-      "id": 12,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "CPU Ratio 1min"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "yellow",
-                "value": 10
-              },
-              {
-                "color": "orange",
-                "value": 50
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          },
-          "unit": "percent"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 4,
-        "x": 4,
-        "y": 8
-      },
-      "id": 13,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Memory Used Ratio"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "custom": {
-            "hideFrom": {
-              "legend": false,
-              "tooltip": false,
-              "viz": false
-            }
-          },
-          "mappings": [],
-          "unit": "decbits"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 8,
-        "w": 4,
-        "x": 8,
-        "y": 8
-      },
-      "id": 4,
-      "options": {
-        "displayLabels": [
-          "percent"
-        ],
-        "legend": {
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": true,
-          "values": []
-        },
-        "pieType": "pie",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "tooltip": {
-          "mode": "single",
-          "sort": "none"
-        }
-      },
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI2"
-          },
-          "item": {
-            "filter": "Total Memory"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI2"
-          },
-          "item": {
-            "filter": "Memory Used"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "title": "RAM Memory Stats",
-      "transformations": [],
-      "transparent": true,
-      "type": "piechart"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "green",
-                  "index": 0,
-                  "text": "NORMAL"
-                },
-                "3": {
-                  "color": "red",
-                  "index": 1,
-                  "text": "FAULT"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 6,
-        "x": 13,
-        "y": 8
-      },
-      "id": 29,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Power 1 Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Power 2 Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "System Uptime",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "System Uptime": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "System Uptime / 100": "System Uptime"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "green",
-                  "index": 0,
-                  "text": "NORMAL"
-                },
-                "3": {
-                  "color": "red",
-                  "index": 1,
-                  "text": "FAULT"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 5,
-        "x": 19,
-        "y": 8
-      },
-      "id": 37,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Power 1 Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Power 2 Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "System Uptime",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "System Uptime": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "Power 1 Status": "Card 1 Status",
-              "Power 2 Status": "Card 1 Status",
-              "System Uptime / 100": "System Uptime"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
             "mode": "palette-classic"
           },
           "custom": {
@@ -2016,10 +2257,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 5,
-        "w": 8,
+        "h": 7,
+        "w": 9,
         "x": 0,
-        "y": 11
+        "y": 8
       },
       "id": 11,
       "options": {
@@ -2047,10 +2288,10 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "CPU Ratio 1min"
@@ -2131,12 +2372,12 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 3,
-        "w": 7,
-        "x": 14,
-        "y": 11
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 8
       },
-      "id": 34,
+      "id": 41,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -2149,7 +2390,7 @@
           "fields": "",
           "values": false
         },
-        "textMode": "name"
+        "textMode": "value_and_name"
       },
       "pluginVersion": "9.3.2",
       "targets": [
@@ -2165,14 +2406,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 33 - Operation Status"
+            "filter": "SFP 25 - Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -2192,7 +2433,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AG",
+          "refId": "E",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2218,14 +2459,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 34 - Operation Status"
+            "filter": "SFP 26 - Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -2245,7 +2486,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AH",
+          "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2271,14 +2512,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 35 - Operation Status"
+            "filter": "SFP 27 - Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -2298,7 +2539,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AI",
+          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2324,14 +2565,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 36 - Operation Status"
+            "filter": "SFP 28 - Temperature"
           },
           "itemTag": {
             "filter": ""
@@ -2351,219 +2592,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AJ",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 37 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AK",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 38 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AL",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 39 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AM",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 40 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AN",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -2581,117 +2610,28 @@
       "transformations": [
         {
           "id": "joinByField",
-          "options": {
-            "mode": "outer"
-          }
+          "options": {}
         },
         {
           "id": "organize",
           "options": {
-            "excludeByName": {
-              "Time": true
-            },
+            "excludeByName": {},
             "indexByName": {
-              "If-Eth. 1 - Operation Status": 1,
-              "If-Eth. 10 - Operation Status": 32,
-              "If-Eth. 11 - Operation Status": 33,
-              "If-Eth. 12 - Operation Status": 34,
-              "If-Eth. 13 - Operation Status": 35,
-              "If-Eth. 14 - Operation Status": 36,
-              "If-Eth. 15 - Operation Status": 37,
-              "If-Eth. 16 - Operation Status": 38,
-              "If-Eth. 17 - Operation Status": 39,
-              "If-Eth. 18 - Operation Status": 40,
-              "If-Eth. 19 - Operation Status": 41,
-              "If-Eth. 2 - Operation Status": 2,
-              "If-Eth. 20 - Operation Status": 42,
-              "If-Eth. 21 - Operation Status": 43,
-              "If-Eth. 22 - Operation Status": 44,
-              "If-Eth. 23 - Operation Status": 45,
-              "If-Eth. 24 - Operation Status": 46,
-              "If-Eth. 25 - Operation Status": 47,
-              "If-Eth. 26 - Operation Status": 48,
-              "If-Eth. 27 - Operation Status": 3,
-              "If-Eth. 28 - Operation Status": 4,
-              "If-Eth. 29 - Operation Status": 5,
-              "If-Eth. 3 - Operation Status": 25,
-              "If-Eth. 30 - Operation Status": 6,
-              "If-Eth. 31 - Operation Status": 7,
-              "If-Eth. 32 - Operation Status": 8,
-              "If-Eth. 33 - Operation Status": 9,
-              "If-Eth. 34 - Operation Status": 10,
-              "If-Eth. 35 - Operation Status": 11,
-              "If-Eth. 36 - Operation Status": 12,
-              "If-Eth. 37 - Operation Status": 13,
-              "If-Eth. 38 - Operation Status": 14,
-              "If-Eth. 39 - Operation Status": 15,
-              "If-Eth. 4 - Operation Status": 26,
-              "If-Eth. 40 - Operation Status": 16,
-              "If-Eth. 41 - Operation Status": 17,
-              "If-Eth. 42 - Operation Status": 18,
-              "If-Eth. 43 - Operation Status": 19,
-              "If-Eth. 44 - Operation Status": 20,
-              "If-Eth. 45 - Operation Status": 21,
-              "If-Eth. 46 - Operation Status": 22,
-              "If-Eth. 47 - Operation Status": 23,
-              "If-Eth. 48 - Operation Status": 24,
-              "If-Eth. 5 - Operation Status": 27,
-              "If-Eth. 6 - Operation Status": 28,
-              "If-Eth. 7 - Operation Status": 29,
-              "If-Eth. 8 - Operation Status": 30,
-              "If-Eth. 9 - Operation Status": 31,
+              "SFP 25 - Temperature": 1,
+              "SFP 26 - Temperature": 2,
+              "SFP 27 - Temperature": 3,
+              "SFP 28 - Temperature": 4,
               "Time": 0
             },
             "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 10 - Operation Status": "XE10",
-              "If-Eth. 11 - Operation Status": "XE11",
-              "If-Eth. 12 - Operation Status": "XE12",
-              "If-Eth. 13 - Operation Status": "XE13",
-              "If-Eth. 14 - Operation Status": "XE14",
-              "If-Eth. 15 - Operation Status": "XE15",
-              "If-Eth. 16 - Operation Status": "XE16",
-              "If-Eth. 17 - Operation Status": "XE17",
-              "If-Eth. 18 - Operation Status": "XE18",
-              "If-Eth. 19 - Operation Status": "XE19",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 20 - Operation Status": "XE20",
-              "If-Eth. 21 - Operation Status": "XE21",
-              "If-Eth. 22 - Operation Status": "XE22",
-              "If-Eth. 23 - Operation Status": "XE23",
-              "If-Eth. 24 - Operation Status": "XE24",
-              "If-Eth. 25 - Operation Status": "XE25",
-              "If-Eth. 26 - Operation Status": "XE26",
-              "If-Eth. 27 - Operation Status": "XE27",
-              "If-Eth. 28 - Operation Status": "XE28",
-              "If-Eth. 29 - Operation Status": "XE29",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 30 - Operation Status": "XE30",
-              "If-Eth. 31 - Operation Status": "XE31",
-              "If-Eth. 32 - Operation Status": "XE32",
-              "If-Eth. 33 - Operation Status": "XE33",
-              "If-Eth. 34 - Operation Status": "XE34",
-              "If-Eth. 35 - Operation Status": "XE35",
-              "If-Eth. 36 - Operation Status": "XE36",
-              "If-Eth. 37 - Operation Status": "XE37",
-              "If-Eth. 38 - Operation Status": "XE38",
-              "If-Eth. 39 - Operation Status": "XE39",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 40 - Operation Status": "XE40",
-              "If-Eth. 41 - Operation Status": "XE41",
-              "If-Eth. 42 - Operation Status": "XE42",
-              "If-Eth. 43 - Operation Status": "XE43",
-              "If-Eth. 44 - Operation Status": "XE44",
-              "If-Eth. 45 - Operation Status": "XE45",
-              "If-Eth. 46 - Operation Status": "XE46",
-              "If-Eth. 47 - Operation Status": "XE47",
-              "If-Eth. 48 - Operation Status": "XE48",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8",
-              "If-Eth. 9 - Operation Status": "XE9",
-              "Xe1": "XE1"
+              "SFP 25 - Temperature": "SFP 25",
+              "SFP 26 - Temperature": "SFP 26",
+              "SFP 27 - Temperature": "SFP 27",
+              "SFP 28 - Temperature": "SFP 28",
+              "SFP 49 - Temperature": "SFP 53",
+              "SFP 50 - Temperature": "SFP 50",
+              "SFP 51 - Temperature": "SFP 51",
+              "SFP 52 - Temperature": "SFP 52"
             }
           }
         }
@@ -2733,17 +2673,1205 @@
               }
             ]
           },
-          "unit": "celsius"
+          "unit": "volt"
         },
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
+        "h": 4,
+        "w": 3,
+        "x": 12,
+        "y": 8
+      },
+      "id": 50,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 25 - Voltage"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 26 - Voltage"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 27 - Voltage"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 28 - Voltage"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "joinByField",
+          "options": {}
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 26 - Voltage",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 27 - Voltage",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 28 - Voltage",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 25 - Voltage",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "SFP 25 - Voltage": true,
+              "SFP 26 - Voltage": true,
+              "SFP 27 - Voltage": true,
+              "SFP 28 - Voltage": true,
+              "SFP 49 - Voltage": true,
+              "SFP 50 - Voltage": true,
+              "SFP 51 - Voltage": true,
+              "SFP 52 - Voltage": true
+            },
+            "indexByName": {
+              "SFP 25 - Voltage": 4,
+              "SFP 25 - Voltage / 100": 5,
+              "SFP 26 - Voltage": 1,
+              "SFP 26 - Voltage / 100": 6,
+              "SFP 27 - Voltage": 2,
+              "SFP 27 - Voltage / 100": 7,
+              "SFP 28 - Voltage": 3,
+              "SFP 28 - Voltage / 100": 8,
+              "Time": 0
+            },
+            "renameByName": {
+              "SFP 25 - Voltage / 100": "SFP 25",
+              "SFP 26 - Voltage / 100": "SFP 26",
+              "SFP 27 - Voltage / 100": "SFP 27",
+              "SFP 28 - Voltage / 100": "SFP 28",
+              "SFP 49 - Temperature": "SFP 53",
+              "SFP 49 - Voltage": "SFP 49",
+              "SFP 49 - Voltage  100": "SFP 49",
+              "SFP 49 - Voltage / 100": "SFP 49",
+              "SFP 50 - Temperature": "SFP 50",
+              "SFP 50 - Voltage": "SFP 50",
+              "SFP 50 - Voltage / 100": "SFP 50",
+              "SFP 51 - Temperature": "SFP 51",
+              "SFP 51 - Voltage": "SFP 51",
+              "SFP 51 - Voltage / 100": "SFP 51",
+              "SFP 52 - Temperature": "SFP 52",
+              "SFP 52 - Voltage": "SFP 52",
+              "SFP 52 - Voltage / 100": "SFP 52"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "green",
+                  "index": 0
+                },
+                "2": {
+                  "color": "red",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "mamp"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 15,
+        "y": 8
+      },
+      "id": 52,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 25 - Current"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 26 - Current"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 27 - Current"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 28 - Current"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "joinByField",
+          "options": {}
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 26 - Current",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 27 - Current",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 28 - Current",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 25 - Current",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "SFP 25 - Current": true,
+              "SFP 26 - Current": true,
+              "SFP 27 - Current": true,
+              "SFP 28 - Current": true,
+              "SFP 49 - Current": true,
+              "SFP 49 - Voltage": true,
+              "SFP 50 - Current": true,
+              "SFP 50 - Voltage": true,
+              "SFP 51 - Current": true,
+              "SFP 51 - Voltage": true,
+              "SFP 52 - Current": true,
+              "SFP 52 - Voltage": true
+            },
+            "indexByName": {
+              "SFP 25 - Current": 4,
+              "SFP 25 - Current / 100": 5,
+              "SFP 26 - Current": 1,
+              "SFP 26 - Current / 100": 6,
+              "SFP 27 - Current": 2,
+              "SFP 27 - Current / 100": 7,
+              "SFP 28 - Current": 3,
+              "SFP 28 - Current / 100": 8,
+              "Time": 0
+            },
+            "renameByName": {
+              "SFP 25 - Current / 100": "SFP 25",
+              "SFP 26 - Current / 100": "SFP 26",
+              "SFP 27 - Current / 100": "SFP 27",
+              "SFP 28 - Current / 100": "SFP 28",
+              "SFP 49 - Current / 100": "SFP 49",
+              "SFP 49 - Temperature": "SFP 53",
+              "SFP 49 - Voltage": "SFP 49",
+              "SFP 49 - Voltage  100": "SFP 49",
+              "SFP 49 - Voltage / 100": "SFP 49",
+              "SFP 50 - Current / 100": "SFP 50",
+              "SFP 50 - Temperature": "SFP 50",
+              "SFP 50 - Voltage": "SFP 50",
+              "SFP 50 - Voltage / 100": "SFP 50",
+              "SFP 51 - Current / 100": "SFP 51",
+              "SFP 51 - Temperature": "SFP 51",
+              "SFP 51 - Voltage": "SFP 51",
+              "SFP 51 - Voltage / 100": "SFP 51",
+              "SFP 52 - Current / 100": "SFP 52",
+              "SFP 52 - Temperature": "SFP 52",
+              "SFP 52 - Voltage": "SFP 52",
+              "SFP 52 - Voltage / 100": "SFP 52"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "green",
+                  "index": 0
+                },
+                "2": {
+                  "color": "red",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 18,
+        "y": 8
+      },
+      "id": 53,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value_and_name"
+      },
+      "pluginVersion": "9.3.2",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 25 - RX PW"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 26 - RX PW"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 27 - RX PW"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 28 - RX PW"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "transformations": [
+        {
+          "id": "joinByField",
+          "options": {}
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 26 - RX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 27 - RX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 28 - RX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 25 - RX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "SFP 25 - RX PW": true,
+              "SFP 26 - RX PW": true,
+              "SFP 27 - RX PW": true,
+              "SFP 28 - RX PW": true,
+              "SFP 49 - Current": true,
+              "SFP 49 - RX PW": true,
+              "SFP 49 - Voltage": true,
+              "SFP 50 - Current": true,
+              "SFP 50 - RX PW": true,
+              "SFP 50 - Voltage": true,
+              "SFP 51 - Current": true,
+              "SFP 51 - RX PW": true,
+              "SFP 51 - Voltage": true,
+              "SFP 52 - Current": true,
+              "SFP 52 - RX PW": true,
+              "SFP 52 - Voltage": true
+            },
+            "indexByName": {
+              "SFP 25 - RX PW": 4,
+              "SFP 25 - RX PW / -100": 5,
+              "SFP 26 - RX PW": 1,
+              "SFP 26 - RX PW / -100": 6,
+              "SFP 27 - RX PW": 2,
+              "SFP 27 - RX PW / -100": 7,
+              "SFP 28 - RX PW": 3,
+              "SFP 28 - RX PW / -100": 8,
+              "Time": 0
+            },
+            "renameByName": {
+              "SFP 25 - RX PW / -100": "SFP 25",
+              "SFP 26 - RX PW / -100": "SFP 26",
+              "SFP 27 - RX PW / -100": "SFP 27",
+              "SFP 28 - RX PW / -100": "SFP 28",
+              "SFP 49 - Current / 100": "SFP 49",
+              "SFP 49 - RX PW / -100": "SFP 49 - RX",
+              "SFP 49 - Temperature": "SFP 53",
+              "SFP 49 - Voltage": "SFP 49",
+              "SFP 49 - Voltage  100": "SFP 49",
+              "SFP 49 - Voltage / 100": "SFP 49",
+              "SFP 50 - Current / 100": "SFP 50",
+              "SFP 50 - RX PW / -100": "SFP 50 - RX",
+              "SFP 50 - Temperature": "SFP 50",
+              "SFP 50 - Voltage": "SFP 50",
+              "SFP 50 - Voltage / 100": "SFP 50",
+              "SFP 51 - Current / 100": "SFP 51",
+              "SFP 51 - RX PW / -100": "SFP 51 - RX",
+              "SFP 51 - Temperature": "SFP 51",
+              "SFP 51 - Voltage": "SFP 51",
+              "SFP 51 - Voltage / 100": "SFP 51",
+              "SFP 52 - Current / 100": "SFP 52",
+              "SFP 52 - RX PW / -100": "SFP 52 - RX",
+              "SFP 52 - Temperature": "SFP 52",
+              "SFP 52 - Voltage": "SFP 52",
+              "SFP 52 - Voltage / 100": "SFP 52"
+            }
+          }
+        }
+      ],
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "${DS_ZABBIX}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "options": {
+                "1": {
+                  "color": "green",
+                  "index": 0
+                },
+                "2": {
+                  "color": "red",
+                  "index": 1
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dBm"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
         "w": 3,
         "x": 21,
-        "y": 11
+        "y": 8
       },
-      "id": 36,
+      "id": 54,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -2756,7 +3884,7 @@
           "fields": "",
           "values": false
         },
-        "textMode": "name"
+        "textMode": "value_and_name"
       },
       "pluginVersion": "9.3.2",
       "targets": [
@@ -2772,14 +3900,67 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 49 - Operation Status"
+            "filter": "SFP 25 - TX PW"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "E",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 26 - TX PW"
           },
           "itemTag": {
             "filter": ""
@@ -2825,14 +4006,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 54 - Operation Status"
+            "filter": "SFP 27 - TX PW"
           },
           "itemTag": {
             "filter": ""
@@ -2865,124 +4046,192 @@
           "trigger": {
             "filter": ""
           }
+        },
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "alexanderzobnin-zabbix-datasource",
+            "uid": "${DS_ZABBIX}"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "$DeviceGroup"
+          },
+          "hide": false,
+          "host": {
+            "filter": "$DeviceIP"
+          },
+          "item": {
+            "filter": "SFP 28 - TX PW"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": {
+            "filter": ""
+          },
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
         }
       ],
       "transformations": [
         {
           "id": "joinByField",
+          "options": {}
+        },
+        {
+          "id": "calculateField",
           "options": {
-            "mode": "outer"
+            "binary": {
+              "left": "SFP 26 - TX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 27 - TX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 28 - TX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
+          }
+        },
+        {
+          "id": "calculateField",
+          "options": {
+            "binary": {
+              "left": "SFP 25 - TX PW",
+              "operator": "/",
+              "reducer": "sum",
+              "right": "-100"
+            },
+            "mode": "binary",
+            "reduce": {
+              "reducer": "sum"
+            }
           }
         },
         {
           "id": "organize",
           "options": {
             "excludeByName": {
-              "Time": true
+              "SFP 25 - TX PW": true,
+              "SFP 26 - TX PW": true,
+              "SFP 27 - TX PW": true,
+              "SFP 28 - TX PW": true,
+              "SFP 49 - Current": true,
+              "SFP 49 - RX PW": true,
+              "SFP 49 - TX PW": true,
+              "SFP 49 - Voltage": true,
+              "SFP 50 - Current": true,
+              "SFP 50 - RX PW": true,
+              "SFP 50 - TX PW": true,
+              "SFP 50 - Voltage": true,
+              "SFP 51 - Current": true,
+              "SFP 51 - RX PW": true,
+              "SFP 51 - TX PW": true,
+              "SFP 51 - Voltage": true,
+              "SFP 52 - Current": true,
+              "SFP 52 - RX PW": true,
+              "SFP 52 - TX PW": true,
+              "SFP 52 - Voltage": true
             },
             "indexByName": {
-              "If-Eth. 1 - Operation Status": 1,
-              "If-Eth. 10 - Operation Status": 32,
-              "If-Eth. 11 - Operation Status": 33,
-              "If-Eth. 12 - Operation Status": 34,
-              "If-Eth. 13 - Operation Status": 35,
-              "If-Eth. 14 - Operation Status": 36,
-              "If-Eth. 15 - Operation Status": 37,
-              "If-Eth. 16 - Operation Status": 38,
-              "If-Eth. 17 - Operation Status": 39,
-              "If-Eth. 18 - Operation Status": 40,
-              "If-Eth. 19 - Operation Status": 41,
-              "If-Eth. 2 - Operation Status": 2,
-              "If-Eth. 20 - Operation Status": 42,
-              "If-Eth. 21 - Operation Status": 43,
-              "If-Eth. 22 - Operation Status": 44,
-              "If-Eth. 23 - Operation Status": 45,
-              "If-Eth. 24 - Operation Status": 46,
-              "If-Eth. 25 - Operation Status": 47,
-              "If-Eth. 26 - Operation Status": 48,
-              "If-Eth. 27 - Operation Status": 3,
-              "If-Eth. 28 - Operation Status": 4,
-              "If-Eth. 29 - Operation Status": 5,
-              "If-Eth. 3 - Operation Status": 25,
-              "If-Eth. 30 - Operation Status": 6,
-              "If-Eth. 31 - Operation Status": 7,
-              "If-Eth. 32 - Operation Status": 8,
-              "If-Eth. 33 - Operation Status": 9,
-              "If-Eth. 34 - Operation Status": 10,
-              "If-Eth. 35 - Operation Status": 11,
-              "If-Eth. 36 - Operation Status": 12,
-              "If-Eth. 37 - Operation Status": 13,
-              "If-Eth. 38 - Operation Status": 14,
-              "If-Eth. 39 - Operation Status": 15,
-              "If-Eth. 4 - Operation Status": 26,
-              "If-Eth. 40 - Operation Status": 16,
-              "If-Eth. 41 - Operation Status": 17,
-              "If-Eth. 42 - Operation Status": 18,
-              "If-Eth. 43 - Operation Status": 19,
-              "If-Eth. 44 - Operation Status": 20,
-              "If-Eth. 45 - Operation Status": 21,
-              "If-Eth. 46 - Operation Status": 22,
-              "If-Eth. 47 - Operation Status": 23,
-              "If-Eth. 48 - Operation Status": 24,
-              "If-Eth. 5 - Operation Status": 27,
-              "If-Eth. 6 - Operation Status": 28,
-              "If-Eth. 7 - Operation Status": 29,
-              "If-Eth. 8 - Operation Status": 30,
-              "If-Eth. 9 - Operation Status": 31,
+              "SFP 25 - TX PW": 4,
+              "SFP 25 - TX PW / -100": 5,
+              "SFP 26 - TX PW": 1,
+              "SFP 26 - TX PW / -100": 6,
+              "SFP 27 - TX PW": 2,
+              "SFP 27 - TX PW / -100": 7,
+              "SFP 28 - TX PW": 3,
+              "SFP 28 - TX PW / -100": 8,
               "Time": 0
             },
             "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 10 - Operation Status": "XE10",
-              "If-Eth. 11 - Operation Status": "XE11",
-              "If-Eth. 12 - Operation Status": "XE12",
-              "If-Eth. 13 - Operation Status": "XE13",
-              "If-Eth. 14 - Operation Status": "XE14",
-              "If-Eth. 15 - Operation Status": "XE15",
-              "If-Eth. 16 - Operation Status": "XE16",
-              "If-Eth. 17 - Operation Status": "XE17",
-              "If-Eth. 18 - Operation Status": "XE18",
-              "If-Eth. 19 - Operation Status": "XE19",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 20 - Operation Status": "XE20",
-              "If-Eth. 21 - Operation Status": "XE21",
-              "If-Eth. 22 - Operation Status": "XE22",
-              "If-Eth. 23 - Operation Status": "XE23",
-              "If-Eth. 24 - Operation Status": "XE24",
-              "If-Eth. 25 - Operation Status": "XE25",
-              "If-Eth. 26 - Operation Status": "XE26",
-              "If-Eth. 27 - Operation Status": "XE27",
-              "If-Eth. 28 - Operation Status": "XE28",
-              "If-Eth. 29 - Operation Status": "XE29",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 30 - Operation Status": "XE30",
-              "If-Eth. 31 - Operation Status": "XE31",
-              "If-Eth. 32 - Operation Status": "XE32",
-              "If-Eth. 33 - Operation Status": "XE33",
-              "If-Eth. 34 - Operation Status": "XE34",
-              "If-Eth. 35 - Operation Status": "XE35",
-              "If-Eth. 36 - Operation Status": "XE36",
-              "If-Eth. 37 - Operation Status": "XE37",
-              "If-Eth. 38 - Operation Status": "XE38",
-              "If-Eth. 39 - Operation Status": "XE39",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 40 - Operation Status": "XE40",
-              "If-Eth. 41 - Operation Status": "XE41",
-              "If-Eth. 42 - Operation Status": "XE42",
-              "If-Eth. 43 - Operation Status": "XE43",
-              "If-Eth. 44 - Operation Status": "XE44",
-              "If-Eth. 45 - Operation Status": "XE45",
-              "If-Eth. 46 - Operation Status": "XE46",
-              "If-Eth. 47 - Operation Status": "XE47",
-              "If-Eth. 48 - Operation Status": "XE48",
-              "If-Eth. 49 - Operation Status": "HGE-49",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 54 - Operation Status": "HGE-50",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8",
-              "If-Eth. 9 - Operation Status": "XE9",
-              "Xe1": "XE1"
+              "SFP 25 - TX PW / -100": "SFP 25",
+              "SFP 26 - TX PW / -100": "SFP 26",
+              "SFP 27 - TX PW / -100": "SFP 27",
+              "SFP 28 - TX PW / -100": "SFP 28",
+              "SFP 49 - Current / 100": "SFP 49",
+              "SFP 49 - RX PW / -100": "SFP 49 - RX",
+              "SFP 49 - TX PW / -100": "SFP 49 - TX PW",
+              "SFP 49 - Temperature": "SFP 53",
+              "SFP 49 - Voltage": "SFP 49",
+              "SFP 49 - Voltage  100": "SFP 49",
+              "SFP 49 - Voltage / 100": "SFP 49",
+              "SFP 50 - Current / 100": "SFP 50",
+              "SFP 50 - RX PW / -100": "SFP 50 - RX",
+              "SFP 50 - TX PW / -100": "SFP 50 - TX PW",
+              "SFP 50 - Temperature": "SFP 50",
+              "SFP 50 - Voltage": "SFP 50",
+              "SFP 50 - Voltage / 100": "SFP 50",
+              "SFP 51 - Current / 100": "SFP 51",
+              "SFP 51 - RX PW / -100": "SFP 51 - RX",
+              "SFP 51 - TX PW / -100": "SFP 51 - TX PW",
+              "SFP 51 - Temperature": "SFP 51",
+              "SFP 51 - Voltage": "SFP 51",
+              "SFP 51 - Voltage / 100": "SFP 51",
+              "SFP 52 - Current / 100": "SFP 52",
+              "SFP 52 - RX PW / -100": "SFP 52 - RX",
+              "SFP 52 - TX PW / -100": "SFP 52 - TX PW",
+              "SFP 52 - Temperature": "SFP 52",
+              "SFP 52 - Voltage": "SFP 52",
+              "SFP 52 - Voltage / 100": "SFP 52"
             }
           }
         }
@@ -3030,1081 +4279,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 7,
-        "x": 14,
-        "y": 14
-      },
-      "id": 33,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "name"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 41 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AO",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 42 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AP",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 43 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AQ",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 44 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AR",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 45 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AT",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 46 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AS",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 47 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AU",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 48 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "AV",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "joinByField",
-          "options": {
-            "mode": "outer"
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Time": true
-            },
-            "indexByName": {
-              "If-Eth. 1 - Operation Status": 1,
-              "If-Eth. 10 - Operation Status": 32,
-              "If-Eth. 11 - Operation Status": 33,
-              "If-Eth. 12 - Operation Status": 34,
-              "If-Eth. 13 - Operation Status": 35,
-              "If-Eth. 14 - Operation Status": 36,
-              "If-Eth. 15 - Operation Status": 37,
-              "If-Eth. 16 - Operation Status": 38,
-              "If-Eth. 17 - Operation Status": 39,
-              "If-Eth. 18 - Operation Status": 40,
-              "If-Eth. 19 - Operation Status": 41,
-              "If-Eth. 2 - Operation Status": 2,
-              "If-Eth. 20 - Operation Status": 42,
-              "If-Eth. 21 - Operation Status": 43,
-              "If-Eth. 22 - Operation Status": 44,
-              "If-Eth. 23 - Operation Status": 45,
-              "If-Eth. 24 - Operation Status": 46,
-              "If-Eth. 25 - Operation Status": 47,
-              "If-Eth. 26 - Operation Status": 48,
-              "If-Eth. 27 - Operation Status": 3,
-              "If-Eth. 28 - Operation Status": 4,
-              "If-Eth. 29 - Operation Status": 5,
-              "If-Eth. 3 - Operation Status": 25,
-              "If-Eth. 30 - Operation Status": 6,
-              "If-Eth. 31 - Operation Status": 7,
-              "If-Eth. 32 - Operation Status": 8,
-              "If-Eth. 33 - Operation Status": 9,
-              "If-Eth. 34 - Operation Status": 10,
-              "If-Eth. 35 - Operation Status": 11,
-              "If-Eth. 36 - Operation Status": 12,
-              "If-Eth. 37 - Operation Status": 13,
-              "If-Eth. 38 - Operation Status": 14,
-              "If-Eth. 39 - Operation Status": 15,
-              "If-Eth. 4 - Operation Status": 26,
-              "If-Eth. 40 - Operation Status": 16,
-              "If-Eth. 41 - Operation Status": 17,
-              "If-Eth. 42 - Operation Status": 18,
-              "If-Eth. 43 - Operation Status": 19,
-              "If-Eth. 44 - Operation Status": 20,
-              "If-Eth. 45 - Operation Status": 21,
-              "If-Eth. 46 - Operation Status": 22,
-              "If-Eth. 47 - Operation Status": 23,
-              "If-Eth. 48 - Operation Status": 24,
-              "If-Eth. 5 - Operation Status": 27,
-              "If-Eth. 6 - Operation Status": 28,
-              "If-Eth. 7 - Operation Status": 29,
-              "If-Eth. 8 - Operation Status": 30,
-              "If-Eth. 9 - Operation Status": 31,
-              "Time": 0
-            },
-            "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 10 - Operation Status": "XE10",
-              "If-Eth. 11 - Operation Status": "XE11",
-              "If-Eth. 12 - Operation Status": "XE12",
-              "If-Eth. 13 - Operation Status": "XE13",
-              "If-Eth. 14 - Operation Status": "XE14",
-              "If-Eth. 15 - Operation Status": "XE15",
-              "If-Eth. 16 - Operation Status": "XE16",
-              "If-Eth. 17 - Operation Status": "XE17",
-              "If-Eth. 18 - Operation Status": "XE18",
-              "If-Eth. 19 - Operation Status": "XE19",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 20 - Operation Status": "XE20",
-              "If-Eth. 21 - Operation Status": "XE21",
-              "If-Eth. 22 - Operation Status": "XE22",
-              "If-Eth. 23 - Operation Status": "XE23",
-              "If-Eth. 24 - Operation Status": "XE24",
-              "If-Eth. 25 - Operation Status": "XE25",
-              "If-Eth. 26 - Operation Status": "XE26",
-              "If-Eth. 27 - Operation Status": "XE27",
-              "If-Eth. 28 - Operation Status": "XE28",
-              "If-Eth. 29 - Operation Status": "XE29",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 30 - Operation Status": "XE30",
-              "If-Eth. 31 - Operation Status": "XE31",
-              "If-Eth. 32 - Operation Status": "XE32",
-              "If-Eth. 33 - Operation Status": "XE33",
-              "If-Eth. 34 - Operation Status": "XE34",
-              "If-Eth. 35 - Operation Status": "XE35",
-              "If-Eth. 36 - Operation Status": "XE36",
-              "If-Eth. 37 - Operation Status": "XE37",
-              "If-Eth. 38 - Operation Status": "XE38",
-              "If-Eth. 39 - Operation Status": "XE39",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 40 - Operation Status": "XE40",
-              "If-Eth. 41 - Operation Status": "XE41",
-              "If-Eth. 42 - Operation Status": "XE42",
-              "If-Eth. 43 - Operation Status": "XE43",
-              "If-Eth. 44 - Operation Status": "XE44",
-              "If-Eth. 45 - Operation Status": "XE45",
-              "If-Eth. 46 - Operation Status": "XE46",
-              "If-Eth. 47 - Operation Status": "XE47",
-              "If-Eth. 48 - Operation Status": "XE48",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8",
-              "If-Eth. 9 - Operation Status": "XE9",
-              "Xe1": "XE1"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "s"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 4,
-        "x": 0,
-        "y": 16
-      },
-      "id": 26,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "System Uptime"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "System Uptime",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "System Uptime": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "System Uptime / 100": "System Uptime"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 4,
-        "x": 4,
-        "y": 16
-      },
-      "id": 27,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Device Temperature"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "System Uptime",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "System Uptime": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "System Uptime / 100": "System Uptime"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "green",
-                  "index": 0,
-                  "text": "NORMAL"
-                },
-                "3": {
-                  "color": "red",
-                  "index": 1,
-                  "text": "FAULT"
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 5,
-        "x": 8,
-        "y": 16
-      },
-      "id": 28,
-      "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.2",
-      "targets": [
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Fan 1 Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "A",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "Fan 2 Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "B",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        }
-      ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "System Uptime",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "System Uptime": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "System Uptime / 100": "System Uptime"
-            }
-          }
-        }
-      ],
-      "transparent": true,
-      "type": "stat"
-    },
-    {
-      "datasource": {
-        "type": "alexanderzobnin-zabbix-datasource",
-        "uid": "${DS_ZABBIX}"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "green",
-                  "index": 0
-                },
-                "2": {
-                  "color": "red",
-                  "index": 1
-                }
-              },
-              "type": "value"
-            }
-          ],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "blue",
-                "value": null
-              }
-            ]
-          },
-          "unit": "celsius"
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 7,
-        "x": 0,
-        "y": 19
+        "w": 15,
+        "x": 9,
+        "y": 12
       },
       "id": 30,
       "options": {
@@ -4135,11 +4312,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 1 - Operation Status"
@@ -4188,11 +4365,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 2 - Operation Status"
@@ -4241,11 +4418,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 3 - Operation Status"
@@ -4294,11 +4471,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 4 - Operation Status"
@@ -4347,11 +4524,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 5 - Operation Status"
@@ -4400,11 +4577,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 6 - Operation Status"
@@ -4453,11 +4630,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 7 - Operation Status"
@@ -4506,11 +4683,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 8 - Operation Status"
@@ -4571,14 +4748,14 @@
               "Time": 0
             },
             "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8"
+              "If-Eth. 1 - Operation Status": "GE1",
+              "If-Eth. 2 - Operation Status": "GE2",
+              "If-Eth. 3 - Operation Status": "GE3",
+              "If-Eth. 4 - Operation Status": "GE4",
+              "If-Eth. 5 - Operation Status": "GE5",
+              "If-Eth. 6 - Operation Status": "GE6",
+              "If-Eth. 7 - Operation Status": "GE7",
+              "If-Eth. 8 - Operation Status": "GE8"
             }
           }
         }
@@ -4594,58 +4771,83 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "thresholds"
+            "mode": "palette-classic"
           },
-          "mappings": [
-            {
-              "options": {
-                "1": {
-                  "color": "green",
-                  "index": 0
-                },
-                "2": {
-                  "color": "red",
-                  "index": 1
-                }
-              },
-              "type": "value"
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 17,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "smooth",
+            "lineWidth": 3,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
             }
-          ],
+          },
+          "mappings": [],
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "blue",
+                "color": "green",
                 "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 10
+              },
+              {
+                "color": "orange",
+                "value": 50
+              },
+              {
+                "color": "red",
+                "value": 80
               }
             ]
           },
-          "unit": "celsius"
+          "unit": "percent"
         },
         "overrides": []
       },
       "gridPos": {
-        "h": 3,
-        "w": 7,
-        "x": 7,
-        "y": 19
+        "h": 6,
+        "w": 9,
+        "x": 0,
+        "y": 15
       },
-      "id": 32,
+      "id": 59,
       "options": {
-        "colorMode": "background",
-        "graphMode": "none",
-        "justifyMode": "center",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
         },
-        "textMode": "name"
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
       },
-      "pluginVersion": "9.3.2",
       "targets": [
         {
           "application": {
@@ -4659,14 +4861,13 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
-          "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 17 - Operation Status"
+            "filter": "Memory Used Ratio"
           },
           "itemTag": {
             "filter": ""
@@ -4686,378 +4887,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "Q",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 18 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "R",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 19 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "S",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 20 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "T",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 21 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "U",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 22 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "V",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 23 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "W",
-          "resultFormat": "time_series",
-          "schema": 12,
-          "table": {
-            "skipEmptyValues": false
-          },
-          "tags": {
-            "filter": ""
-          },
-          "textFilter": "",
-          "trigger": {
-            "filter": ""
-          }
-        },
-        {
-          "application": {
-            "filter": ""
-          },
-          "countTriggersBy": "",
-          "datasource": {
-            "type": "alexanderzobnin-zabbix-datasource",
-            "uid": "${DS_ZABBIX}"
-          },
-          "evaltype": "0",
-          "functions": [],
-          "group": {
-            "filter": "10.1.24.0/24"
-          },
-          "hide": false,
-          "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
-          },
-          "item": {
-            "filter": "If-Eth. 24 - Operation Status"
-          },
-          "itemTag": {
-            "filter": ""
-          },
-          "macro": {
-            "filter": ""
-          },
-          "options": {
-            "count": false,
-            "disableDataAlignment": false,
-            "showDisabledItems": false,
-            "skipEmptyValues": false,
-            "useTrends": "default",
-            "useZabbixValueMapping": false
-          },
-          "proxy": {
-            "filter": ""
-          },
-          "queryType": "0",
-          "refId": "X",
+          "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5072,126 +4902,9 @@
           }
         }
       ],
-      "transformations": [
-        {
-          "id": "joinByField",
-          "options": {
-            "mode": "outer"
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Time": true
-            },
-            "indexByName": {
-              "If-Eth. 1 - Operation Status": 1,
-              "If-Eth. 10 - Operation Status": 32,
-              "If-Eth. 11 - Operation Status": 33,
-              "If-Eth. 12 - Operation Status": 34,
-              "If-Eth. 13 - Operation Status": 35,
-              "If-Eth. 14 - Operation Status": 36,
-              "If-Eth. 15 - Operation Status": 37,
-              "If-Eth. 16 - Operation Status": 38,
-              "If-Eth. 17 - Operation Status": 39,
-              "If-Eth. 18 - Operation Status": 40,
-              "If-Eth. 19 - Operation Status": 41,
-              "If-Eth. 2 - Operation Status": 2,
-              "If-Eth. 20 - Operation Status": 42,
-              "If-Eth. 21 - Operation Status": 43,
-              "If-Eth. 22 - Operation Status": 44,
-              "If-Eth. 23 - Operation Status": 45,
-              "If-Eth. 24 - Operation Status": 46,
-              "If-Eth. 25 - Operation Status": 47,
-              "If-Eth. 26 - Operation Status": 48,
-              "If-Eth. 27 - Operation Status": 3,
-              "If-Eth. 28 - Operation Status": 4,
-              "If-Eth. 29 - Operation Status": 5,
-              "If-Eth. 3 - Operation Status": 25,
-              "If-Eth. 30 - Operation Status": 6,
-              "If-Eth. 31 - Operation Status": 7,
-              "If-Eth. 32 - Operation Status": 8,
-              "If-Eth. 33 - Operation Status": 9,
-              "If-Eth. 34 - Operation Status": 10,
-              "If-Eth. 35 - Operation Status": 11,
-              "If-Eth. 36 - Operation Status": 12,
-              "If-Eth. 37 - Operation Status": 13,
-              "If-Eth. 38 - Operation Status": 14,
-              "If-Eth. 39 - Operation Status": 15,
-              "If-Eth. 4 - Operation Status": 26,
-              "If-Eth. 40 - Operation Status": 16,
-              "If-Eth. 41 - Operation Status": 17,
-              "If-Eth. 42 - Operation Status": 18,
-              "If-Eth. 43 - Operation Status": 19,
-              "If-Eth. 44 - Operation Status": 20,
-              "If-Eth. 45 - Operation Status": 21,
-              "If-Eth. 46 - Operation Status": 22,
-              "If-Eth. 47 - Operation Status": 23,
-              "If-Eth. 48 - Operation Status": 24,
-              "If-Eth. 5 - Operation Status": 27,
-              "If-Eth. 6 - Operation Status": 28,
-              "If-Eth. 7 - Operation Status": 29,
-              "If-Eth. 8 - Operation Status": 30,
-              "If-Eth. 9 - Operation Status": 31,
-              "Time": 0
-            },
-            "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 10 - Operation Status": "XE10",
-              "If-Eth. 11 - Operation Status": "XE11",
-              "If-Eth. 12 - Operation Status": "XE12",
-              "If-Eth. 13 - Operation Status": "XE13",
-              "If-Eth. 14 - Operation Status": "XE14",
-              "If-Eth. 15 - Operation Status": "XE15",
-              "If-Eth. 16 - Operation Status": "XE16",
-              "If-Eth. 17 - Operation Status": "XE17",
-              "If-Eth. 18 - Operation Status": "XE18",
-              "If-Eth. 19 - Operation Status": "XE19",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 20 - Operation Status": "XE20",
-              "If-Eth. 21 - Operation Status": "XE21",
-              "If-Eth. 22 - Operation Status": "XE22",
-              "If-Eth. 23 - Operation Status": "XE23",
-              "If-Eth. 24 - Operation Status": "XE24",
-              "If-Eth. 25 - Operation Status": "XE25",
-              "If-Eth. 26 - Operation Status": "XE26",
-              "If-Eth. 27 - Operation Status": "XE27",
-              "If-Eth. 28 - Operation Status": "XE28",
-              "If-Eth. 29 - Operation Status": "XE29",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 30 - Operation Status": "XE30",
-              "If-Eth. 31 - Operation Status": "XE31",
-              "If-Eth. 32 - Operation Status": "XE32",
-              "If-Eth. 33 - Operation Status": "XE33",
-              "If-Eth. 34 - Operation Status": "XE34",
-              "If-Eth. 35 - Operation Status": "XE35",
-              "If-Eth. 36 - Operation Status": "XE36",
-              "If-Eth. 37 - Operation Status": "XE37",
-              "If-Eth. 38 - Operation Status": "XE38",
-              "If-Eth. 39 - Operation Status": "XE39",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 40 - Operation Status": "XE40",
-              "If-Eth. 41 - Operation Status": "XE41",
-              "If-Eth. 42 - Operation Status": "XE42",
-              "If-Eth. 43 - Operation Status": "XE43",
-              "If-Eth. 44 - Operation Status": "XE44",
-              "If-Eth. 45 - Operation Status": "XE45",
-              "If-Eth. 46 - Operation Status": "XE46",
-              "If-Eth. 47 - Operation Status": "XE47",
-              "If-Eth. 48 - Operation Status": "XE48",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8",
-              "If-Eth. 9 - Operation Status": "XE9",
-              "Xe1": "XE1"
-            }
-          }
-        }
-      ],
+      "title": "RAM Cosumption History",
       "transparent": true,
-      "type": "stat"
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -5233,9 +4946,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 7,
-        "x": 0,
-        "y": 22
+        "w": 15,
+        "x": 9,
+        "y": 15
       },
       "id": 31,
       "options": {
@@ -5266,11 +4979,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 9 - Operation Status"
@@ -5293,7 +5006,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "I",
+          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5319,11 +5032,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 10 - Operation Status"
@@ -5346,7 +5059,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "J",
+          "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5372,11 +5085,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 11 - Operation Status"
@@ -5399,7 +5112,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "K",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5425,11 +5138,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 12 - Operation Status"
@@ -5452,7 +5165,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "L",
+          "refId": "D",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5478,11 +5191,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 13 - Operation Status"
@@ -5505,7 +5218,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "M",
+          "refId": "E",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5531,11 +5244,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 14 - Operation Status"
@@ -5558,7 +5271,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "N",
+          "refId": "F",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5584,11 +5297,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 15 - Operation Status"
@@ -5611,7 +5324,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "O",
+          "refId": "G",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5637,11 +5350,11 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
             "filter": "If-Eth. 16 - Operation Status"
@@ -5664,7 +5377,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "P",
+          "refId": "H",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5689,110 +5402,35 @@
         {
           "id": "organize",
           "options": {
-            "excludeByName": {
-              "Time": true
-            },
+            "excludeByName": {},
             "indexByName": {
-              "If-Eth. 1 - Operation Status": 1,
-              "If-Eth. 10 - Operation Status": 32,
-              "If-Eth. 11 - Operation Status": 33,
-              "If-Eth. 12 - Operation Status": 34,
-              "If-Eth. 13 - Operation Status": 35,
-              "If-Eth. 14 - Operation Status": 36,
-              "If-Eth. 15 - Operation Status": 37,
-              "If-Eth. 16 - Operation Status": 38,
-              "If-Eth. 17 - Operation Status": 39,
-              "If-Eth. 18 - Operation Status": 40,
-              "If-Eth. 19 - Operation Status": 41,
-              "If-Eth. 2 - Operation Status": 2,
-              "If-Eth. 20 - Operation Status": 42,
-              "If-Eth. 21 - Operation Status": 43,
-              "If-Eth. 22 - Operation Status": 44,
-              "If-Eth. 23 - Operation Status": 45,
-              "If-Eth. 24 - Operation Status": 46,
-              "If-Eth. 25 - Operation Status": 47,
-              "If-Eth. 26 - Operation Status": 48,
-              "If-Eth. 27 - Operation Status": 3,
-              "If-Eth. 28 - Operation Status": 4,
-              "If-Eth. 29 - Operation Status": 5,
-              "If-Eth. 3 - Operation Status": 25,
-              "If-Eth. 30 - Operation Status": 6,
-              "If-Eth. 31 - Operation Status": 7,
-              "If-Eth. 32 - Operation Status": 8,
-              "If-Eth. 33 - Operation Status": 9,
-              "If-Eth. 34 - Operation Status": 10,
-              "If-Eth. 35 - Operation Status": 11,
-              "If-Eth. 36 - Operation Status": 12,
-              "If-Eth. 37 - Operation Status": 13,
-              "If-Eth. 38 - Operation Status": 14,
-              "If-Eth. 39 - Operation Status": 15,
-              "If-Eth. 4 - Operation Status": 26,
-              "If-Eth. 40 - Operation Status": 16,
-              "If-Eth. 41 - Operation Status": 17,
-              "If-Eth. 42 - Operation Status": 18,
-              "If-Eth. 43 - Operation Status": 19,
-              "If-Eth. 44 - Operation Status": 20,
-              "If-Eth. 45 - Operation Status": 21,
-              "If-Eth. 46 - Operation Status": 22,
-              "If-Eth. 47 - Operation Status": 23,
-              "If-Eth. 48 - Operation Status": 24,
-              "If-Eth. 5 - Operation Status": 27,
-              "If-Eth. 6 - Operation Status": 28,
-              "If-Eth. 7 - Operation Status": 29,
-              "If-Eth. 8 - Operation Status": 30,
-              "If-Eth. 9 - Operation Status": 31,
+              "If-Eth. 10 - Operation Status": 2,
+              "If-Eth. 11 - Operation Status": 3,
+              "If-Eth. 12 - Operation Status": 4,
+              "If-Eth. 13 - Operation Status": 5,
+              "If-Eth. 14 - Operation Status": 6,
+              "If-Eth. 15 - Operation Status": 7,
+              "If-Eth. 16 - Operation Status": 8,
+              "If-Eth. 9 - Operation Status": 1,
               "Time": 0
             },
             "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 10 - Operation Status": "XE10",
-              "If-Eth. 11 - Operation Status": "XE11",
-              "If-Eth. 12 - Operation Status": "XE12",
-              "If-Eth. 13 - Operation Status": "XE13",
-              "If-Eth. 14 - Operation Status": "XE14",
-              "If-Eth. 15 - Operation Status": "XE15",
-              "If-Eth. 16 - Operation Status": "XE16",
-              "If-Eth. 17 - Operation Status": "XE17",
-              "If-Eth. 18 - Operation Status": "XE18",
-              "If-Eth. 19 - Operation Status": "XE19",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 20 - Operation Status": "XE20",
-              "If-Eth. 21 - Operation Status": "XE21",
-              "If-Eth. 22 - Operation Status": "XE22",
-              "If-Eth. 23 - Operation Status": "XE23",
-              "If-Eth. 24 - Operation Status": "XE24",
-              "If-Eth. 25 - Operation Status": "XE25",
-              "If-Eth. 26 - Operation Status": "XE26",
-              "If-Eth. 27 - Operation Status": "XE27",
-              "If-Eth. 28 - Operation Status": "XE28",
-              "If-Eth. 29 - Operation Status": "XE29",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 30 - Operation Status": "XE30",
-              "If-Eth. 31 - Operation Status": "XE31",
-              "If-Eth. 32 - Operation Status": "XE32",
-              "If-Eth. 33 - Operation Status": "XE33",
-              "If-Eth. 34 - Operation Status": "XE34",
-              "If-Eth. 35 - Operation Status": "XE35",
-              "If-Eth. 36 - Operation Status": "XE36",
-              "If-Eth. 37 - Operation Status": "XE37",
-              "If-Eth. 38 - Operation Status": "XE38",
-              "If-Eth. 39 - Operation Status": "XE39",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 40 - Operation Status": "XE40",
-              "If-Eth. 41 - Operation Status": "XE41",
-              "If-Eth. 42 - Operation Status": "XE42",
-              "If-Eth. 43 - Operation Status": "XE43",
-              "If-Eth. 44 - Operation Status": "XE44",
-              "If-Eth. 45 - Operation Status": "XE45",
-              "If-Eth. 46 - Operation Status": "XE46",
-              "If-Eth. 47 - Operation Status": "XE47",
-              "If-Eth. 48 - Operation Status": "XE48",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8",
-              "If-Eth. 9 - Operation Status": "XE9",
-              "Xe1": "XE1"
+              "If-Eth. 1 - Operation Status": "GE1",
+              "If-Eth. 10 - Operation Status": "GE10",
+              "If-Eth. 11 - Operation Status": "GE11",
+              "If-Eth. 12 - Operation Status": "GE12",
+              "If-Eth. 13 - Operation Status": "GE13",
+              "If-Eth. 14 - Operation Status": "GE14",
+              "If-Eth. 15 - Operation Status": "GE15",
+              "If-Eth. 16 - Operation Status": "GE16",
+              "If-Eth. 2 - Operation Status": "GE2",
+              "If-Eth. 3 - Operation Status": "GE3",
+              "If-Eth. 4 - Operation Status": "GE4",
+              "If-Eth. 5 - Operation Status": "GE5",
+              "If-Eth. 6 - Operation Status": "GE6",
+              "If-Eth. 7 - Operation Status": "GE7",
+              "If-Eth. 8 - Operation Status": "GE8",
+              "If-Eth. 9 - Operation Status": "GE9"
             }
           }
         }
@@ -5840,11 +5478,11 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 7,
-        "x": 7,
-        "y": 22
+        "w": 15,
+        "x": 9,
+        "y": 18
       },
-      "id": 35,
+      "id": 32,
       "options": {
         "colorMode": "background",
         "graphMode": "none",
@@ -5873,14 +5511,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 25 - Operation Status"
+            "filter": "If-Eth. 17 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -5900,7 +5538,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "Y",
+          "refId": "B",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5926,14 +5564,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 26 - Operation Status"
+            "filter": "If-Eth. 18 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -5953,7 +5591,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "Z",
+          "refId": "A",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -5979,14 +5617,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 27 - Operation Status"
+            "filter": "If-Eth. 19 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -6006,7 +5644,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AA",
+          "refId": "C",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6032,14 +5670,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 28 - Operation Status"
+            "filter": "If-Eth. 20 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -6059,7 +5697,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AB",
+          "refId": "D",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6085,14 +5723,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 29 - Operation Status"
+            "filter": "If-Eth. 21 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -6112,7 +5750,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AC",
+          "refId": "E",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6138,14 +5776,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 30 - Operation Status"
+            "filter": "If-Eth. 22 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -6165,7 +5803,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AD",
+          "refId": "F",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6191,14 +5829,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 31 - Operation Status"
+            "filter": "If-Eth. 23 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -6218,7 +5856,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AE",
+          "refId": "G",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6244,14 +5882,14 @@
           "evaltype": "0",
           "functions": [],
           "group": {
-            "filter": "10.1.24.0/24"
+            "filter": "$DeviceGroup"
           },
           "hide": false,
           "host": {
-            "filter": "10.1.24.184 - S6520X-HI3"
+            "filter": "$DeviceIP"
           },
           "item": {
-            "filter": "If-Eth. 32 - Operation Status"
+            "filter": "If-Eth. 24 - Operation Status"
           },
           "itemTag": {
             "filter": ""
@@ -6271,7 +5909,7 @@
             "filter": ""
           },
           "queryType": "0",
-          "refId": "AF",
+          "refId": "H",
           "resultFormat": "time_series",
           "schema": 12,
           "table": {
@@ -6296,70 +5934,43 @@
         {
           "id": "organize",
           "options": {
-            "excludeByName": {
-              "Time": true
-            },
+            "excludeByName": {},
             "indexByName": {
-              "If-Eth. 25 - Operation Status": 1,
-              "If-Eth. 26 - Operation Status": 2,
-              "If-Eth. 27 - Operation Status": 3,
-              "If-Eth. 28 - Operation Status": 4,
-              "If-Eth. 29 - Operation Status": 5,
-              "If-Eth. 30 - Operation Status": 6,
-              "If-Eth. 31 - Operation Status": 7,
-              "If-Eth. 32 - Operation Status": 8,
+              "If-Eth. 17 - Operation Status": 1,
+              "If-Eth. 18 - Operation Status": 2,
+              "If-Eth. 19 - Operation Status": 3,
+              "If-Eth. 20 - Operation Status": 4,
+              "If-Eth. 21 - Operation Status": 5,
+              "If-Eth. 22 - Operation Status": 6,
+              "If-Eth. 23 - Operation Status": 7,
+              "If-Eth. 24 - Operation Status": 8,
               "Time": 0
             },
             "renameByName": {
-              "If-Eth. 1 - Operation Status": "XE1",
-              "If-Eth. 10 - Operation Status": "XE10",
-              "If-Eth. 11 - Operation Status": "XE11",
-              "If-Eth. 12 - Operation Status": "XE12",
-              "If-Eth. 13 - Operation Status": "XE13",
-              "If-Eth. 14 - Operation Status": "XE14",
-              "If-Eth. 15 - Operation Status": "XE15",
-              "If-Eth. 16 - Operation Status": "XE16",
-              "If-Eth. 17 - Operation Status": "XE17",
-              "If-Eth. 18 - Operation Status": "XE18",
-              "If-Eth. 19 - Operation Status": "XE19",
-              "If-Eth. 2 - Operation Status": "XE2",
-              "If-Eth. 20 - Operation Status": "XE20",
-              "If-Eth. 21 - Operation Status": "XE21",
-              "If-Eth. 22 - Operation Status": "XE22",
-              "If-Eth. 23 - Operation Status": "XE23",
-              "If-Eth. 24 - Operation Status": "XE24",
-              "If-Eth. 25 - Operation Status": "XE25",
-              "If-Eth. 26 - Operation Status": "XE26",
-              "If-Eth. 27 - Operation Status": "XE27",
-              "If-Eth. 28 - Operation Status": "XE28",
-              "If-Eth. 29 - Operation Status": "XE29",
-              "If-Eth. 3 - Operation Status": "XE3",
-              "If-Eth. 30 - Operation Status": "XE30",
-              "If-Eth. 31 - Operation Status": "XE31",
-              "If-Eth. 32 - Operation Status": "XE32",
-              "If-Eth. 33 - Operation Status": "XE33",
-              "If-Eth. 34 - Operation Status": "XE34",
-              "If-Eth. 35 - Operation Status": "XE35",
-              "If-Eth. 36 - Operation Status": "XE36",
-              "If-Eth. 37 - Operation Status": "XE37",
-              "If-Eth. 38 - Operation Status": "XE38",
-              "If-Eth. 39 - Operation Status": "XE39",
-              "If-Eth. 4 - Operation Status": "XE4",
-              "If-Eth. 40 - Operation Status": "XE40",
-              "If-Eth. 41 - Operation Status": "XE41",
-              "If-Eth. 42 - Operation Status": "XE42",
-              "If-Eth. 43 - Operation Status": "XE43",
-              "If-Eth. 44 - Operation Status": "XE44",
-              "If-Eth. 45 - Operation Status": "XE45",
-              "If-Eth. 46 - Operation Status": "XE46",
-              "If-Eth. 47 - Operation Status": "XE47",
-              "If-Eth. 48 - Operation Status": "XE48",
-              "If-Eth. 5 - Operation Status": "XE5",
-              "If-Eth. 6 - Operation Status": "XE6",
-              "If-Eth. 7 - Operation Status": "XE7",
-              "If-Eth. 8 - Operation Status": "XE8",
-              "If-Eth. 9 - Operation Status": "XE9",
-              "Xe1": "XE1"
+              "If-Eth. 1 - Operation Status": "GE1",
+              "If-Eth. 10 - Operation Status": "GE10",
+              "If-Eth. 11 - Operation Status": "GE11",
+              "If-Eth. 12 - Operation Status": "GE12",
+              "If-Eth. 13 - Operation Status": "GE13",
+              "If-Eth. 14 - Operation Status": "GE14",
+              "If-Eth. 15 - Operation Status": "GE15",
+              "If-Eth. 16 - Operation Status": "GE16",
+              "If-Eth. 17 - Operation Status": "GE17",
+              "If-Eth. 18 - Operation Status": "GE18",
+              "If-Eth. 19 - Operation Status": "GE19",
+              "If-Eth. 2 - Operation Status": "GE2",
+              "If-Eth. 20 - Operation Status": "GE20",
+              "If-Eth. 21 - Operation Status": "GE21",
+              "If-Eth. 22 - Operation Status": "GE22",
+              "If-Eth. 23 - Operation Status": "GE23",
+              "If-Eth. 24 - Operation Status": "GE24",
+              "If-Eth. 3 - Operation Status": "GE3",
+              "If-Eth. 4 - Operation Status": "GE4",
+              "If-Eth. 5 - Operation Status": "GE5",
+              "If-Eth. 6 - Operation Status": "GE6",
+              "If-Eth. 7 - Operation Status": "GE7",
+              "If-Eth. 8 - Operation Status": "GE8",
+              "If-Eth. 9 - Operation Status": "GE9"
             }
           }
         }
@@ -6373,7 +5984,53 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "SC 3170 24GP",
+          "value": "SC 3170 24GP"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "DeviceIP",
+        "options": [
+          {
+            "selected": true,
+            "text": "SC 3170 24GP",
+            "value": "SC 3170 24GP"
+          }
+        ],
+        "query": "SC 3170 24GP",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "Switches Devices",
+          "value": "Switches Devices"
+        },
+        "description": "",
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "DeviceGroup",
+        "options": [
+          {
+            "selected": true,
+            "text": "Switches Devices",
+            "value": "Switches Devices"
+          }
+        ],
+        "query": "Switches Devices",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
   },
   "time": {
     "from": "now-1h",
@@ -6381,8 +6038,8 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "S6520X-HI",
-  "uid": "iM_4w9LSz",
-  "version": 8,
+  "title": "SC 3170-24GP-4X",
+  "uid": "L_DBZDCIk",
+  "version": 6,
   "weekStart": ""
 }
