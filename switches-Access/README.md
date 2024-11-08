@@ -1,2 +1,2 @@
 # Access Switch Templates
-![main](./pictures/example.png)
+![main](./pictures/main.png)
