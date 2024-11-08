@@ -1,11 +1,11 @@
 {
     "zabbix_export": {
         "version": "6.0",
-        "date": "2024-05-16T15:11:48Z",
+        "date": "2024-11-08T16:29:08Z",
         "groups": [
             {
-                "uuid": "7d9b9033ef5e409f8dd158865d918a18",
-                "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+                "uuid": "75fe8255ef454c3fbc620017c44fd3d5",
+                "name": "Switches Devices"
             }
         ],
         "templates": [
@@ -13,10 +13,10 @@
                 "uuid": "151bba13ae7b4a3da3073c5a7f722a6c",
                 "template": "Intelbras Switches - S3328G-PB",
                 "name": "Intelbras Switches - S3328G-PB",
-                "description": "This template is designed for Intelbras S3328G-PB switch\n\n#=======================================\nGithub: https://github.com/arthurcadore/zabbixTemplates\nData: 17/05/2024\n#=======================================",
+                "description": "This template is designed for Intelbras S3328G-PB switch\n\n#=======================================\nGithub: https://github.com/arthurcadore/monitoring-templates\nData: 08/11/2024\n#=======================================",
                 "groups": [
                     {
-                        "name": "Switches Intelbras - Capacita\u00e7\u00e3o Redes"
+                        "name": "Switches Devices"
                     }
                 ],
                 "items": [
