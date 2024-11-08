@@ -2001,7 +2001,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 5,
+        "w": 3,
         "x": 12,
         "y": 7
       },
@@ -2133,8 +2133,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 3,
-        "x": 17,
+        "w": 6,
+        "x": 15,
         "y": 7
       },
       "id": 5,
@@ -2237,8 +2237,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 4,
-        "x": 20,
+        "w": 3,
+        "x": 21,
         "y": 7
       },
       "id": 7,
@@ -3066,7 +3066,7 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 71,
+            "fillOpacity": 41,
             "gradientMode": "opacity",
             "hideFrom": {
               "legend": false,
@@ -3074,11 +3074,8 @@
               "viz": false
             },
             "lineInterpolation": "smooth",
-            "lineStyle": {
-              "fill": "solid"
-            },
-            "lineWidth": 4,
-            "pointSize": 5,
+            "lineWidth": 2,
+            "pointSize": 10,
             "scaleDistribution": {
               "type": "linear"
             },
@@ -3101,20 +3098,12 @@
                 "value": null
               },
               {
-                "color": "#EAB839",
-                "value": 20
-              },
-              {
-                "color": "orange",
-                "value": 40
-              },
-              {
                 "color": "red",
-                "value": 60
+                "value": 80
               }
             ]
           },
-          "unit": "percent"
+          "unit": "bytes"
         },
         "overrides": []
       },
@@ -3124,7 +3113,7 @@
         "x": 0,
         "y": 13
       },
-      "id": 24,
+      "id": 30,
       "options": {
         "legend": {
           "calcs": [],
@@ -3148,7 +3137,19 @@
             "uid": "${DS_ZABBIX}"
           },
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [],
+                "name": "delta",
+                "params": []
+              },
+              "params": [],
+              "text": "delta()"
+            }
+          ],
           "group": {
             "filter": "$DeviceGroup"
           },
@@ -3156,7 +3157,7 @@
             "filter": "$DeviceName"
           },
           "item": {
-            "filter": "CPU Free Ratio"
+            "filter": "/$Interface - In Octets/"
           },
           "itemTag": {
             "filter": ""
@@ -3200,7 +3201,19 @@
             "uid": "${DS_ZABBIX}"
           },
           "evaltype": "0",
-          "functions": [],
+          "functions": [
+            {
+              "added": true,
+              "def": {
+                "category": "Transform",
+                "defaultParams": [],
+                "name": "delta",
+                "params": []
+              },
+              "params": [],
+              "text": "delta()"
+            }
+          ],
           "group": {
             "filter": "$DeviceGroup"
           },
@@ -3209,7 +3222,7 @@
             "filter": "$DeviceName"
           },
           "item": {
-            "filter": "Memory Free"
+            "filter": "/$Interface - Out Octets/"
           },
           "itemTag": {
             "filter": ""
@@ -3244,84 +3257,6 @@
           }
         }
       ],
-      "transformations": [
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "100",
-              "operator": "-",
-              "reducer": "sum",
-              "right": "CPU Free Ratio"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "Memory Free",
-              "operator": "/",
-              "reducer": "sum",
-              "right": "256000"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "Memory Free / 256000",
-              "operator": "*",
-              "reducer": "sum",
-              "right": "100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "calculateField",
-          "options": {
-            "binary": {
-              "left": "100",
-              "operator": "-",
-              "reducer": "sum",
-              "right": "Memory Free / 256000 * 100"
-            },
-            "mode": "binary",
-            "reduce": {
-              "reducer": "sum"
-            }
-          }
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "CPU Free Ratio": true,
-              "Memory Free": true,
-              "Memory Free / 256000": true,
-              "Memory Free / 256000 * 100": true
-            },
-            "indexByName": {},
-            "renameByName": {
-              "100 - CPU Free Ratio": "CPU Used",
-              "100 - Memory Free / 256000 * 100": "Memory Used"
-            }
-          }
-        }
-      ],
       "transparent": true,
       "type": "timeseries"
     }
@@ -3335,8 +3270,8 @@
       {
         "current": {
           "selected": false,
-          "text": "R3005G - 2",
-          "value": "R3005G - 2"
+          "text": "R3005G - 1",
+          "value": "R3005G - 1"
         },
         "hide": 0,
         "includeAll": false,
@@ -3345,11 +3280,11 @@
         "options": [
           {
             "selected": true,
-            "text": "R3005G - 2",
-            "value": "R3005G - 2"
+            "text": "R3005G - 1",
+            "value": "R3005G - 1"
           }
         ],
-        "query": "R3005G - 2",
+        "query": "R3005G - 1",
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
@@ -3378,7 +3313,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "WAN1",
           "value": "WAN1"
         },
@@ -3412,6 +3347,73 @@
         "queryValue": "",
         "skipUrlSync": false,
         "type": "custom"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "15",
+          "value": "15"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "multi": false,
+        "name": "Interface",
+        "options": [
+          {
+            "selected": false,
+            "text": "11",
+            "value": "11"
+          },
+          {
+            "selected": false,
+            "text": "12",
+            "value": "12"
+          },
+          {
+            "selected": false,
+            "text": "13",
+            "value": "13"
+          },
+          {
+            "selected": false,
+            "text": "14",
+            "value": "14"
+          },
+          {
+            "selected": true,
+            "text": "15",
+            "value": "15"
+          },
+          {
+            "selected": false,
+            "text": "16",
+            "value": "16"
+          },
+          {
+            "selected": false,
+            "text": "17",
+            "value": "17"
+          },
+          {
+            "selected": false,
+            "text": "18",
+            "value": "18"
+          },
+          {
+            "selected": false,
+            "text": "19",
+            "value": "19"
+          },
+          {
+            "selected": false,
+            "text": "20",
+            "value": "20"
+          }
+        ],
+        "query": "11,12,13,14,15,16,17,18,19,20",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
       }
     ]
   },
@@ -3422,7 +3424,7 @@
   "timepicker": {},
   "timezone": "",
   "title": "R3005G",
-  "uid": "lE_AlBWHk",
-  "version": 22,
+  "uid": "QVijokMHk",
+  "version": 10,
   "weekStart": ""
 }
